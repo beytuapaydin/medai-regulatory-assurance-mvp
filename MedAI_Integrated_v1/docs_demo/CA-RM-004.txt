@@ -1,0 +1,6 @@
+Document ID: CA-RM-004
+Title: Preliminary Risk Management Plan
+Revision: 0.3-demo
+Review State: DRAFT_SYNTHETIC
+
+Preliminary hazard brainstorming for ECG interpretation errors is recorded. Risk acceptability, residual risks, Annex I alignment and approval remain open.

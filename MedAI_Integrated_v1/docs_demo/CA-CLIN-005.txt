@@ -1,0 +1,6 @@
+Document ID: CA-CLIN-005
+Title: Clinical Evaluation Outline
+Revision: 0.1-demo
+Review State: DRAFT_SYNTHETIC
+
+The outline proposes clinical evidence activities and a PMCF approach but does not include completed clinical evaluation or PMCF records.

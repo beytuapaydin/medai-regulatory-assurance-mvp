@@ -1,0 +1,15 @@
+.venv/
+.local/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Local reviewer audit records
+**/human_review/review_events.jsonl
+**/human_review/code_backup*/
+**/human_review/code_backups/

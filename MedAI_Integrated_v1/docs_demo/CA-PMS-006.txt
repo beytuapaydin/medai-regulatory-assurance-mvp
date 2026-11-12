@@ -1,0 +1,6 @@
+Document ID: CA-PMS-006
+Title: Post-Market Surveillance Plan — Draft
+Revision: 0.1-demo
+Review State: DRAFT_SYNTHETIC
+
+A high-level PMS plan draft describes monitoring sources. It has not been implemented or validated.

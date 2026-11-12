@@ -1,0 +1,6 @@
+Document ID: CA-REQ-002
+Title: GSPR Mapping — Working Copy
+Revision: 0.1-demo
+Review State: DRAFT_SYNTHETIC
+
+An incomplete worksheet lists selected GSPR headings and possible verification methods. Requirement coverage and traceability are not verified.

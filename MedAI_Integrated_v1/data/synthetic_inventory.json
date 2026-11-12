@@ -1,0 +1,104 @@
+{
+  "product": {
+    "name": "CardioAhead",
+    "description": "Fictional example: AI-assisted ECG analysis SaMD",
+    "classification": "IIb hypothesis only; not determined or verified",
+    "real_customer_documents": false,
+    "scenario": "Synthetic, illustrative QMS evidence register for a demonstration; NOT actual medical-device documentation"
+  },
+  "documents": [
+    {
+      "id": "CA-QMS-001",
+      "title": "Regulatory Compliance Strategy — Draft",
+      "revision": "0.2-demo",
+      "owner": "Regulatory Affairs (fictional)",
+      "review_state": "DRAFT_SYNTHETIC",
+      "excerpt": "A draft regulatory strategy register lists planned conformity-assessment activities and change-control responsibilities. No approved procedure or executed records are attached."
+    },
+    {
+      "id": "CA-REQ-002",
+      "title": "GSPR Mapping — Working Copy",
+      "revision": "0.1-demo",
+      "owner": "Systems Engineering (fictional)",
+      "review_state": "DRAFT_SYNTHETIC",
+      "excerpt": "An incomplete worksheet lists selected GSPR headings and possible verification methods. Requirement coverage and traceability are not verified."
+    },
+    {
+      "id": "CA-QMS-003",
+      "title": "Management Responsibility Charter — Draft",
+      "revision": "0.1-demo",
+      "owner": "Quality Management (fictional)",
+      "review_state": "DRAFT_SYNTHETIC",
+      "excerpt": "A provisional responsibility matrix identifies management roles but contains no controlled approval or effectiveness evidence."
+    },
+    {
+      "id": "CA-RM-004",
+      "title": "Preliminary Risk Management Plan",
+      "revision": "0.3-demo",
+      "owner": "Safety Engineering (fictional)",
+      "review_state": "DRAFT_SYNTHETIC",
+      "excerpt": "Preliminary hazard brainstorming for ECG interpretation errors is recorded. Risk acceptability, residual risks, Annex I alignment and approval remain open."
+    },
+    {
+      "id": "CA-CLIN-005",
+      "title": "Clinical Evaluation Outline",
+      "revision": "0.1-demo",
+      "owner": "Clinical Affairs (fictional)",
+      "review_state": "DRAFT_SYNTHETIC",
+      "excerpt": "The outline proposes clinical evidence activities and a PMCF approach but does not include completed clinical evaluation or PMCF records."
+    },
+    {
+      "id": "CA-PMS-006",
+      "title": "Post-Market Surveillance Plan — Draft",
+      "revision": "0.1-demo",
+      "owner": "Quality Management (fictional)",
+      "review_state": "DRAFT_SYNTHETIC",
+      "excerpt": "A high-level PMS plan draft describes monitoring sources. It has not been implemented or validated."
+    },
+    {
+      "id": "CA-CAPA-007",
+      "title": "CAPA Process Outline",
+      "revision": "0.1-demo",
+      "owner": "Quality Management (fictional)",
+      "review_state": "DRAFT_SYNTHETIC",
+      "excerpt": "A CAPA workflow draft lists corrective action stages. No effectiveness verification records are attached."
+    }
+  ],
+  "illustrative_links": [
+    {
+      "clause": "a",
+      "document_id": "CA-QMS-001",
+      "rationale": "Candidate strategy draft; execution and approval not evidenced"
+    },
+    {
+      "clause": "b",
+      "document_id": "CA-REQ-002",
+      "rationale": "Candidate incomplete GSPR map; full coverage not evidenced"
+    },
+    {
+      "clause": "c",
+      "document_id": "CA-QMS-003",
+      "rationale": "Candidate draft management responsibilities; controlled approval absent"
+    },
+    {
+      "clause": "e",
+      "document_id": "CA-RM-004",
+      "rationale": "Candidate risk plan; Annex I implementation not demonstrated"
+    },
+    {
+      "clause": "f",
+      "document_id": "CA-CLIN-005",
+      "rationale": "Candidate clinical evaluation outline, no completed evaluation"
+    },
+    {
+      "clause": "i",
+      "document_id": "CA-PMS-006",
+      "rationale": "Candidate PMS plan, implementation and maintenance not evidenced"
+    },
+    {
+      "clause": "l",
+      "document_id": "CA-CAPA-007",
+      "rationale": "Candidate CAPA draft, effectiveness verification missing"
+    }
+  ]
+}

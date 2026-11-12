@@ -1,0 +1,257 @@
+{
+  "release_gate": "NOT_PRODUCTION",
+  "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+  "article": 10,
+  "subsection": 9,
+  "introduction": "Manufacturers shall ensure that procedures are in place to keep series production in conformity with the requirements of this Regu­ lation. Changes in device design or characteristics and changes in the harmonised standards or CS by reference to which the conformity of a device is declared shall be adequately taken into account in a timely manner. Manufacturers of devices, other than investigational devices, shall establish, document, implement, maintain, keep up to date and continually improve a quality management system that shall ensure compliance with this Regulation in the most effective manner and in a manner that is proportionate to the risk class and the type of device. The quality management system shall cover all parts and elements of a manufacturer's organisation dealing with the quality of processes, procedures and devices. It shall govern the structure, responsibilities, procedures, processes and management resources required to implement the principles and actions necessary to achieve compliance with the provisions of this Regulation. The quality management system shall address at least the following aspects: 02017R0745 — EN — 19.07.2026 — 007.001 — 19 ▼B",
+  "clauses": [
+    {
+      "label": "a",
+      "article": 10,
+      "subsection": 9,
+      "text": "a strategy for regulatory compliance, including compliance with conformity assessment procedures and procedures for management of modifications to the devices covered by the system;",
+      "text_sha256": "aef50cb40211a0dc50c14980565333311703cf631a2890f9483442ebaf39abae",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "b",
+      "article": 10,
+      "subsection": 9,
+      "text": "identification of applicable general safety and performance requirements and exploration of options to address those require­ ments;",
+      "text_sha256": "9034ea522397163860baa0dfe7effde9e1549dea278fc6423a1bfcd1161ffd3d",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "c",
+      "article": 10,
+      "subsection": 9,
+      "text": "responsibility of the management;",
+      "text_sha256": "06210e24a08812f5dd4816eb6a53c70edfbe4f71b474f022aa6a0a59defe5370",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "d",
+      "article": 10,
+      "subsection": 9,
+      "text": "resource management, including selection and control of suppliers and sub-contractors;",
+      "text_sha256": "bd82e08bf05c96398bbc2b4fcaa48600c89250ebafc1a6907d944a91449e87e4",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "e",
+      "article": 10,
+      "subsection": 9,
+      "text": "risk management as set out in in Section 3 of Annex I;",
+      "text_sha256": "376c3aac7ab0e23cc323b759959161fee9363765cc295048d1ae8933d8cf5b84",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "f",
+      "article": 10,
+      "subsection": 9,
+      "text": "clinical evaluation in accordance with Article 61 and Annex XIV, including PMCF;",
+      "text_sha256": "9f6c5cf38ca9de499a12f713df85b35f24bdc8d4674971aeb076612b9e23e415",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "g",
+      "article": 10,
+      "subsection": 9,
+      "text": "product realisation, including planning, design, development, production and service provision;",
+      "text_sha256": "4789debe0d36b274d0abaf0bdf7765052f879e0afc99a0af7a52cd23d50cd68b",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "h",
+      "article": 10,
+      "subsection": 9,
+      "text": "verification of the UDI assignments made in accordance with Article 27(3) to all relevant devices and ensuring consistency and validity of information provided in accordance with Article 29;",
+      "text_sha256": "f7377ccbf4220e605b131cc3c5c6df6eac0dc6e831d75fb4db874f37b60fe03b",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "i",
+      "article": 10,
+      "subsection": 9,
+      "text": "setting-up, implementation and maintenance of a post-market surveillance system, in accordance with Article 83;",
+      "text_sha256": "9e44fb8310b41e6607c02e531ce8411dce0f6fc9cd9183a391579ee15fd40a60",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "j",
+      "article": 10,
+      "subsection": 9,
+      "text": "handling communication with competent authorities, notified bodies, other economic operators, customers and/or other stake­ holders;",
+      "text_sha256": "b48934bb2a32aabb1e54e38ffa0366e5d29496774700896a6efa8bc58925a3e7",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "k",
+      "article": 10,
+      "subsection": 9,
+      "text": "processes for reporting of serious incidents and field safety corrective actions in the context of vigilance;",
+      "text_sha256": "4e4a0f34c1e16383bea6a2a24fd5ead5a403533142d52db5ec16eb61b33ced69",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "l",
+      "article": 10,
+      "subsection": 9,
+      "text": "management of corrective and preventive actions and verification of their effectiveness;",
+      "text_sha256": "5520a030aefaca5b9954b550f6e1dad2842a965a63975756a2db302d54a37374",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    },
+    {
+      "label": "m",
+      "article": 10,
+      "subsection": 9,
+      "text": "processes for monitoring and measurement of output, data analysis and product improvement.",
+      "text_sha256": "a6c463ada965135c5c27ad5773f6204d11a89fdcf46ce13f45d1b137d185fb04",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+      "source_article_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "review_status": "UNVERIFIED_EXTRACT",
+      "expert_validated": false
+    }
+  ],
+  "caveat": "Automated character spans and labels are not legal, semantic, or human validation. Human reviewer must compare against official PDF."
+}

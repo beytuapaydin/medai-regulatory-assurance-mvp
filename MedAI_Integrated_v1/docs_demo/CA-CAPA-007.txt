@@ -1,0 +1,6 @@
+Document ID: CA-CAPA-007
+Title: CAPA Process Outline
+Revision: 0.1-demo
+Review State: DRAFT_SYNTHETIC
+
+A CAPA workflow draft lists corrective action stages. No effectiveness verification records are attached.

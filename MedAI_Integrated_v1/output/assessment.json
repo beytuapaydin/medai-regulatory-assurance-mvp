@@ -1,0 +1,397 @@
+{
+  "project": "CardioAhead · MedAI Integrated Pilot",
+  "generated_utc": "2026-11-12T12:47:39.848204+00:00",
+  "type": "LOCAL_RETRIEVAL_CANDIDATES_NOT_COMPLIANCE_FINDINGS",
+  "source_pdf_sha256": "a8cca6f45159c678e2562ad5ad9140f4d1caad9b074ed97d78bc2b2347f912d0",
+  "documents": [
+    {
+      "id": "CA-CAPA-007",
+      "filename": "CA-CAPA-007.txt",
+      "sha256": "c0ea4ed62a3a5ddd6e552998c37a58e831ff5f3e76e846b647eb7ac1d510f252"
+    },
+    {
+      "id": "CA-CLIN-005",
+      "filename": "CA-CLIN-005.txt",
+      "sha256": "796577d181e194c575a22ba92b4afa9498a561ea4a0339ae679c0d69c38f915e"
+    },
+    {
+      "id": "CA-PMS-006",
+      "filename": "CA-PMS-006.txt",
+      "sha256": "897134535e90095de56278f41c5902793db16c61d6e6026703e694fd953bfaf7"
+    },
+    {
+      "id": "CA-QMS-001",
+      "filename": "CA-QMS-001.txt",
+      "sha256": "dbdff61e93fb2877430b623e3ea42abc815d3f184ad03da42857f75e53fed32d"
+    },
+    {
+      "id": "CA-QMS-003",
+      "filename": "CA-QMS-003.txt",
+      "sha256": "b7e34b92e91ebe751f2bb47d4482026988011302cd9f5d1ed48fb5f5f6aba667"
+    },
+    {
+      "id": "CA-REQ-002",
+      "filename": "CA-REQ-002.txt",
+      "sha256": "dc256e76953d05eec46a5fb45fe80187446c6bbaace39b43a72bb423e769d6d5"
+    },
+    {
+      "id": "CA-RM-004",
+      "filename": "CA-RM-004.txt",
+      "sha256": "f67542c0b0f377b2f5242e196cab24eb3691e562d553d73332a5567dcb0fe23b"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "MDR-10-9-A",
+      "label": "a",
+      "requirement": "a strategy for regulatory compliance, including compliance with conformity assessment procedures and procedures for management of modifications to the devices covered by the system;",
+      "requirement_sha256": "aef50cb40211a0dc50c14980565333311703cf631a2890f9483442ebaf39abae",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "CANDIDATE_FOR_REVIEW",
+      "candidates": [
+        {
+          "document_id": "CA-QMS-001",
+          "filename": "CA-QMS-001.txt",
+          "document_sha256": "dbdff61e93fb2877430b623e3ea42abc815d3f184ad03da42857f75e53fed32d",
+          "passage": "A draft regulatory strategy register lists planned conformity-assessment activities and change-control responsibilities. No approved procedure or executed records are attached.",
+          "passage_sha256": "231e39baf275c88c11512ab2f1cf4f112d5af02de7167b9026bb8369f81487f4",
+          "start_char": 120,
+          "end_char": 296,
+          "retrieval_score": 0.4,
+          "matched_terms": [
+            "assessment",
+            "change",
+            "conformity",
+            "control",
+            "regulatory",
+            "strategy"
+          ]
+        }
+      ],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Check passage relevance, evidence completeness, controlled approval and implementation records."
+    },
+    {
+      "requirement_id": "MDR-10-9-B",
+      "label": "b",
+      "requirement": "identification of applicable general safety and performance requirements and exploration of options to address those require­ ments;",
+      "requirement_sha256": "9034ea522397163860baa0dfe7effde9e1549dea278fc6423a1bfcd1161ffd3d",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "CANDIDATE_FOR_REVIEW",
+      "candidates": [
+        {
+          "document_id": "CA-REQ-002",
+          "filename": "CA-REQ-002.txt",
+          "document_sha256": "dc256e76953d05eec46a5fb45fe80187446c6bbaace39b43a72bb423e769d6d5",
+          "passage": "An incomplete worksheet lists selected GSPR headings and possible verification methods. Requirement coverage and traceability are not verified.",
+          "passage_sha256": "ab2d12ef692e2ea7d11c1fa0055606e824dfa181b3f7748dd72aad9b8412ace0",
+          "start_char": 109,
+          "end_char": 252,
+          "retrieval_score": 0.2963,
+          "matched_terms": [
+            "gspr",
+            "traceability",
+            "verification",
+            "worksheet"
+          ]
+        }
+      ],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Check passage relevance, evidence completeness, controlled approval and implementation records."
+    },
+    {
+      "requirement_id": "MDR-10-9-C",
+      "label": "c",
+      "requirement": "responsibility of the management;",
+      "requirement_sha256": "06210e24a08812f5dd4816eb6a53c70edfbe4f71b474f022aa6a0a59defe5370",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "CANDIDATE_FOR_REVIEW",
+      "candidates": [
+        {
+          "document_id": "CA-QMS-003",
+          "filename": "CA-QMS-003.txt",
+          "document_sha256": "b7e34b92e91ebe751f2bb47d4482026988011302cd9f5d1ed48fb5f5f6aba667",
+          "passage": "A provisional responsibility matrix identifies management roles but contains no controlled approval or effectiveness evidence.",
+          "passage_sha256": "43fc911e1b08e7ae9c59a320ae92ed28c386cd6fe7ebb2c36124c1e8132a2fbc",
+          "start_char": 123,
+          "end_char": 249,
+          "retrieval_score": 0.44444,
+          "matched_terms": [
+            "management",
+            "matrix",
+            "responsibility",
+            "roles"
+          ]
+        }
+      ],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Check passage relevance, evidence completeness, controlled approval and implementation records."
+    },
+    {
+      "requirement_id": "MDR-10-9-D",
+      "label": "d",
+      "requirement": "resource management, including selection and control of suppliers and sub-contractors;",
+      "requirement_sha256": "bd82e08bf05c96398bbc2b4fcaa48600c89250ebafc1a6907d944a91449e87e4",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "NO_RETRIEVAL_CANDIDATE",
+      "candidates": [],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Search other controlled records; absence of a candidate is not proof of a compliance gap."
+    },
+    {
+      "requirement_id": "MDR-10-9-E",
+      "label": "e",
+      "requirement": "risk management as set out in in Section 3 of Annex I;",
+      "requirement_sha256": "376c3aac7ab0e23cc323b759959161fee9363765cc295048d1ae8933d8cf5b84",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "CANDIDATE_FOR_REVIEW",
+      "candidates": [
+        {
+          "document_id": "CA-RM-004",
+          "filename": "CA-RM-004.txt",
+          "document_sha256": "f67542c0b0f377b2f5242e196cab24eb3691e562d553d73332a5567dcb0fe23b",
+          "passage": "Preliminary hazard brainstorming for ECG interpretation errors is recorded. Risk acceptability, residual risks, Annex I alignment and approval remain open.",
+          "passage_sha256": "e09796b4a02a132398d0d84f5353d52f887fb4a57f86ce827f8113da74021e8a",
+          "start_char": 113,
+          "end_char": 268,
+          "retrieval_score": 0.30769,
+          "matched_terms": [
+            "acceptability",
+            "annex",
+            "residual",
+            "risk"
+          ]
+        }
+      ],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Check passage relevance, evidence completeness, controlled approval and implementation records."
+    },
+    {
+      "requirement_id": "MDR-10-9-F",
+      "label": "f",
+      "requirement": "clinical evaluation in accordance with Article 61 and Annex XIV, including PMCF;",
+      "requirement_sha256": "9f6c5cf38ca9de499a12f713df85b35f24bdc8d4674971aeb076612b9e23e415",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "CANDIDATE_FOR_REVIEW",
+      "candidates": [
+        {
+          "document_id": "CA-CLIN-005",
+          "filename": "CA-CLIN-005.txt",
+          "document_sha256": "796577d181e194c575a22ba92b4afa9498a561ea4a0339ae679c0d69c38f915e",
+          "passage": "The outline proposes clinical evidence activities and a PMCF approach but does not include completed clinical evaluation or PMCF records.",
+          "passage_sha256": "a06a9ad36065b4bb224b0eeb21727bd00216c391991a150932e702f274fa33a8",
+          "start_char": 110,
+          "end_char": 247,
+          "retrieval_score": 0.34783,
+          "matched_terms": [
+            "clinical",
+            "evaluation",
+            "evidence",
+            "pmcf"
+          ]
+        }
+      ],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Check passage relevance, evidence completeness, controlled approval and implementation records."
+    },
+    {
+      "requirement_id": "MDR-10-9-G",
+      "label": "g",
+      "requirement": "product realisation, including planning, design, development, production and service provision;",
+      "requirement_sha256": "4789debe0d36b274d0abaf0bdf7765052f879e0afc99a0af7a52cd23d50cd68b",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "NO_RETRIEVAL_CANDIDATE",
+      "candidates": [],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Search other controlled records; absence of a candidate is not proof of a compliance gap."
+    },
+    {
+      "requirement_id": "MDR-10-9-H",
+      "label": "h",
+      "requirement": "verification of the UDI assignments made in accordance with Article 27(3) to all relevant devices and ensuring consistency and validity of information provided in accordance with Article 29;",
+      "requirement_sha256": "f7377ccbf4220e605b131cc3c5c6df6eac0dc6e831d75fb4db874f37b60fe03b",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "NO_RETRIEVAL_CANDIDATE",
+      "candidates": [],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Search other controlled records; absence of a candidate is not proof of a compliance gap."
+    },
+    {
+      "requirement_id": "MDR-10-9-I",
+      "label": "i",
+      "requirement": "setting-up, implementation and maintenance of a post-market surveillance system, in accordance with Article 83;",
+      "requirement_sha256": "9e44fb8310b41e6607c02e531ce8411dce0f6fc9cd9183a391579ee15fd40a60",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "CANDIDATE_FOR_REVIEW",
+      "candidates": [
+        {
+          "document_id": "CA-PMS-006",
+          "filename": "CA-PMS-006.txt",
+          "document_sha256": "897134535e90095de56278f41c5902793db16c61d6e6026703e694fd953bfaf7",
+          "passage": "Document ID: CA-PMS-006\nTitle: Post-Market Surveillance Plan — Draft\nRevision: 0.1-demo\nReview State: DRAFT_SYNTHETIC",
+          "passage_sha256": "6b7df9397f0581b02c77e5ae3ca7db631a47a46cbd3458ddb7302b8c8f247edb",
+          "start_char": 0,
+          "end_char": 117,
+          "retrieval_score": 0.32,
+          "matched_terms": [
+            "market",
+            "pms",
+            "post",
+            "surveillance"
+          ]
+        }
+      ],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Check passage relevance, evidence completeness, controlled approval and implementation records."
+    },
+    {
+      "requirement_id": "MDR-10-9-J",
+      "label": "j",
+      "requirement": "handling communication with competent authorities, notified bodies, other economic operators, customers and/or other stake­ holders;",
+      "requirement_sha256": "b48934bb2a32aabb1e54e38ffa0366e5d29496774700896a6efa8bc58925a3e7",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "NO_RETRIEVAL_CANDIDATE",
+      "candidates": [],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Search other controlled records; absence of a candidate is not proof of a compliance gap."
+    },
+    {
+      "requirement_id": "MDR-10-9-K",
+      "label": "k",
+      "requirement": "processes for reporting of serious incidents and field safety corrective actions in the context of vigilance;",
+      "requirement_sha256": "4e4a0f34c1e16383bea6a2a24fd5ead5a403533142d52db5ec16eb61b33ced69",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "CANDIDATE_FOR_REVIEW",
+      "candidates": [
+        {
+          "document_id": "CA-CAPA-007",
+          "filename": "CA-CAPA-007.txt",
+          "document_sha256": "c0ea4ed62a3a5ddd6e552998c37a58e831ff5f3e76e846b647eb7ac1d510f252",
+          "passage": "A CAPA workflow draft lists corrective action stages. No effectiveness verification records are attached.",
+          "passage_sha256": "3c03b0bf5f6aa428c6eb1f51fbd3bc73371264ad7499655328fb241625967227",
+          "start_char": 103,
+          "end_char": 208,
+          "retrieval_score": 0.18182,
+          "matched_terms": [
+            "action",
+            "corrective"
+          ]
+        }
+      ],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Check passage relevance, evidence completeness, controlled approval and implementation records."
+    },
+    {
+      "requirement_id": "MDR-10-9-L",
+      "label": "l",
+      "requirement": "management of corrective and preventive actions and verification of their effectiveness;",
+      "requirement_sha256": "5520a030aefaca5b9954b550f6e1dad2842a965a63975756a2db302d54a37374",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "CANDIDATE_FOR_REVIEW",
+      "candidates": [
+        {
+          "document_id": "CA-CAPA-007",
+          "filename": "CA-CAPA-007.txt",
+          "document_sha256": "c0ea4ed62a3a5ddd6e552998c37a58e831ff5f3e76e846b647eb7ac1d510f252",
+          "passage": "A CAPA workflow draft lists corrective action stages. No effectiveness verification records are attached.",
+          "passage_sha256": "3c03b0bf5f6aa428c6eb1f51fbd3bc73371264ad7499655328fb241625967227",
+          "start_char": 103,
+          "end_char": 208,
+          "retrieval_score": 0.44444,
+          "matched_terms": [
+            "capa",
+            "corrective",
+            "effectiveness",
+            "verification"
+          ]
+        },
+        {
+          "document_id": "CA-QMS-003",
+          "filename": "CA-QMS-003.txt",
+          "document_sha256": "b7e34b92e91ebe751f2bb47d4482026988011302cd9f5d1ed48fb5f5f6aba667",
+          "passage": "A provisional responsibility matrix identifies management roles but contains no controlled approval or effectiveness evidence.",
+          "passage_sha256": "43fc911e1b08e7ae9c59a320ae92ed28c386cd6fe7ebb2c36124c1e8132a2fbc",
+          "start_char": 123,
+          "end_char": 249,
+          "retrieval_score": 0.21053,
+          "matched_terms": [
+            "effectiveness",
+            "management"
+          ]
+        }
+      ],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Check passage relevance, evidence completeness, controlled approval and implementation records."
+    },
+    {
+      "requirement_id": "MDR-10-9-M",
+      "label": "m",
+      "requirement": "processes for monitoring and measurement of output, data analysis and product improvement.",
+      "requirement_sha256": "a6c463ada965135c5c27ad5773f6204d11a89fdcf46ce13f45d1b137d185fb04",
+      "source_id": "eu-mdr-2017-745-20260719",
+      "source_version": "2026-07-19 consolidated",
+      "source_review": "EXTRACT_UNVERIFIED",
+      "state": "NO_RETRIEVAL_CANDIDATE",
+      "candidates": [],
+      "evidence_sufficiency": "NOT_ASSESSED",
+      "legal_applicability": "NOT_ASSESSED",
+      "human_review": "PENDING",
+      "review_action": "Search other controlled records; absence of a candidate is not proof of a compliance gap."
+    }
+  ],
+  "release_gate": "NOT_PRODUCTION",
+  "limitations": [
+    "Source extracted from MDR PDF; expert verification pending",
+    "Retrieval uses lexical/concept heuristic, not semantic legal entailment",
+    "Documents are not vetted for authenticity, scope, revision or applicability",
+    "Any candidate requires human relevance, sufficiency and applicability review"
+  ]
+}

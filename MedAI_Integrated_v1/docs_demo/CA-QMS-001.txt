@@ -1,0 +1,6 @@
+Document ID: CA-QMS-001
+Title: Regulatory Compliance Strategy — Draft
+Revision: 0.2-demo
+Review State: DRAFT_SYNTHETIC
+
+A draft regulatory strategy register lists planned conformity-assessment activities and change-control responsibilities. No approved procedure or executed records are attached.

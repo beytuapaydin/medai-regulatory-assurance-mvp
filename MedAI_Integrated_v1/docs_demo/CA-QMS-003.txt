@@ -1,0 +1,6 @@
+Document ID: CA-QMS-003
+Title: Management Responsibility Charter — Draft
+Revision: 0.1-demo
+Review State: DRAFT_SYNTHETIC
+
+A provisional responsibility matrix identifies management roles but contains no controlled approval or effectiveness evidence.
