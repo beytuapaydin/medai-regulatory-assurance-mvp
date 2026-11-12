@@ -130,3 +130,8 @@ Authoritative regulatory-text verification; expert-labeled retrieval/evidence su
 ### Assurance Gap Report
 ![MedAI Assurance Gap Report](docs/images/assurance-report.png)
 
+
+## Development Roadmap
+
+Track completed milestones, current development, and planned improvements in the [MedAI Development Roadmap](https://github.com/users/beytuapaydin/projects/2/views/1).
+
