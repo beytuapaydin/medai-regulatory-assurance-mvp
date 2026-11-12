@@ -96,7 +96,7 @@ def make_event(data, source_sha, events, payload):
     rationale=payload.get('rationale','').strip()
     gap=payload.get('gap','').strip()
     if not (2 <= len(reviewer) <= 100 and 15 <= len(rationale) <= 4000 and len(gap) <= 2000):
-        raise ValueError('Reviewer (2â€“100 chars) and detailed rationale (15â€“4000 chars) required')
+        raise ValueError('Reviewer (2–100 chars) and detailed rationale (15–4000 chars) required')
     event={
         'event_number':len(events)+1,
         'timestamp_utc':dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -151,13 +151,13 @@ def page(data,events,token,notice=''):
         rid=r['requirement_id']; old=latest.get(rid)
         candidates=r.get('candidates',[])
         options='<option value="">No candidate / missing evidence</option>' + ''.join('<option value="'+html.escape(c['document_id'],quote=True)+'">'+html.escape(c['document_id'])+'</option>' for c in candidates)
-        candidate_html=''.join('<div class="candidate"><b>'+html.escape(c['document_id'])+'</b> Â· '+html.escape(c['filename'])+'<blockquote>'+html.escape(c['passage'])+'</blockquote><small>SHA-256: '+html.escape(c['passage_sha256'])+'</small></div>' for c in candidates) or '<p class="muted">No automatically retrieved candidate; do not infer noncompliance.</p>'
+        candidate_html=''.join('<div class="candidate"><b>'+html.escape(c['document_id'])+'</b> · '+html.escape(c['filename'])+'<blockquote>'+html.escape(c['passage'])+'</blockquote><small>SHA-256: '+html.escape(c['passage_sha256'])+'</small></div>' for c in candidates) or '<p class="muted">No automatically retrieved candidate; do not infer noncompliance.</p>'
         last='<p class="reviewed">Latest review: '+html.escape(old['relevance'])+' / '+html.escape(old['evidence_sufficiency_review'])+' by '+html.escape(old['reviewer'])+'</p>' if old else '<p class="muted">Pending human review</p>'
         cards.append('<section class="card"><h3>'+html.escape(rid)+' <span class="pill">'+str(len(candidates))+' candidate(s)</span></h3><p>'+html.escape(r['requirement'])+'</p>'+candidate_html+last+
           '<form method="POST" action="/review"><input type="hidden" name="csrf" value="'+token+'"><input type="hidden" name="requirement_id" value="'+html.escape(rid)+'"><div class="fields"><label>Candidate<select name="candidate_id">'+options+'</select></label><label>Relevance<select name="relevance"><option>UNCERTAIN</option><option>RELEVANT</option><option>NOT_RELEVANT</option></select></label><label>Evidence sufficiency (reviewer only)<select name="sufficiency"><option>NOT_ASSESSED</option><option>PARTIAL</option><option>INSUFFICIENT</option><option>REVIEWER_CONSIDERS_SUFFICIENT</option></select></label></div><label>Reviewer name / identifier<input required minlength="2" maxlength="100" name="reviewer" placeholder="Qualified reviewer"></label><label>Rationale (minimum 15 characters)<textarea required minlength="15" maxlength="4000" name="rationale" placeholder="Explain exactly what this passage supports and does not support"></textarea></label><label>Gap / next action<textarea name="gap" maxlength="2000" placeholder="What evidence or review is still required?"></textarea></label><button type="submit">Record review decision</button></form></section>')
     return ('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MedAI Evidence Review</title>'+
       '<style>body{font:15px system-ui,Arial;background:#f4f6f8;color:#172338;margin:0}header{background:#142d43;color:white;padding:25px 5vw}main{max-width:1000px;margin:25px auto;padding:0 15px}.card{background:white;border:1px solid #dee5ea;border-radius:12px;padding:22px;margin:18px 0;box-shadow:0 3px 13px #11111108}h1{margin:0 0 8px}h3{margin:0 0 10px}.muted,small{color:#627284}.candidate{border-left:3px solid #558296;padding:12px;margin:10px 0;background:#f7fafb}blockquote{margin:10px 0;white-space:pre-wrap}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}label{display:block;font-weight:600;margin:12px 0 3px}input,select,textarea{display:block;width:100%;box-sizing:border-box;padding:10px;border:1px solid #bdc9d4;border-radius:6px;margin-top:5px;font:inherit}textarea{min-height:65px}button{background:#19677b;color:white;border:0;border-radius:7px;padding:11px 18px;cursor:pointer}.pill{font-size:12px;color:#416275}.reviewed{color:#145a42;font-weight:600}.note{padding:12px 15px;background:#fff5dc;border-radius:8px;color:#624a16}</style>'+
-      '<header><h1>MedAI Â· Evidence Review Workbench</h1><div>CardioAhead synthetic demonstration Â· '+str(reviewed)+'/13 requirements reviewed Â· '+str(len(events))+' audit events</div></header><main><p class="note"><b>NOT PRODUCTION â€” NOT A COMPLIANCE DECISION.</b> Candidate passages are not proof of regulatory conformity. Human review events are append-only, with a hash chain for accidental-change detection (not a tamper-proof signature).</p>'+('<p class="note">'+html.escape(notice)+'</p>' if notice else '')+'<p><a href="/gap-report">Gap Assessment Report</a> Â· <a href="/gap-report.csv">Gap CSV</a> Â· <a href="/summary.csv">Export review CSV</a> Â· <a href="/events.jsonl">Download audit log</a></p>'+''.join(cards)+'</main></html>')
+      '<header><h1>MedAI · Evidence Review Workbench</h1><div>CardioAhead synthetic demonstration · '+str(reviewed)+'/13 requirements reviewed · '+str(len(events))+' audit events</div></header><main><p class="note"><b>NOT PRODUCTION — NOT A COMPLIANCE DECISION.</b> Candidate passages are not proof of regulatory conformity. Human review events are append-only, with a hash chain for accidental-change detection (not a tamper-proof signature).</p>'+('<p class="note">'+html.escape(notice)+'</p>' if notice else '')+'<p><a href="/gap-report">Gap Assessment Report</a> · <a href="/gap-report.csv">Gap CSV</a> · <a href="/summary.csv">Export review CSV</a> · <a href="/events.jsonl">Download audit log</a></p>'+''.join(cards)+'</main></html>')
 
 
 def serve(port):
@@ -225,4 +225,5 @@ def main():
     elif args.command=='serve':serve(args.port)
 
 if __name__=='__main__':main()
+
 

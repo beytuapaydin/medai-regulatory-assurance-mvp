@@ -1,4 +1,4 @@
-"""Read-only, reviewer-grounded gap triage views. NEVER a regulatory conformity verdict."""
+﻿"""Read-only, reviewer-grounded gap triage views. NEVER a regulatory conformity verdict."""
 from __future__ import annotations
 import csv
 import html
@@ -169,3 +169,4 @@ def to_csv_bytes(report: dict) -> bytes:
                 r[k]="'"+v
         w.writerow(r)
     return out.getvalue().encode('utf-8-sig')
+
