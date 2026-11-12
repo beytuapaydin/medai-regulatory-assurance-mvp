@@ -121,3 +121,12 @@ All supplied case documents are synthetic. Before publishing a fork with other d
 Authoritative regulatory-text verification; expert-labeled retrieval/evidence sufficiency benchmark; clear correction/supersession workflow for review events; robust provenance; secure roles and audit logging; actual usability/quality-system validation.
 
 **Positioning:** A technical demonstration of regulatory evidence traceability, human-in-the-loop quality review, and conservative uncertainty handling for SaMD assurance.
+
+## Application Screenshots
+
+### Human Review Workbench
+![MedAI Human Review Workbench](docs/images/review-workbench.png)
+
+### Assurance Gap Report
+![MedAI Assurance Gap Report](docs/images/assurance-report.png)
+
