@@ -1,912 +1,912 @@
-﻿[
-    {
-        "requirement_id":  "MDR-10-9-A",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-A",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-A",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-A",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "DIRECTLY_RELEVANT",
-        "evidence_polarity":  "PARTIAL",
-        "sufficiency":  "INSUFFICIENT",
-        "annotation_status":  "PROVISIONAL",
-        "annotator":  "AI_ASSISTED_DRAFT",
-        "rationale":  "Draft regulatory strategy addresses conformity assessment and change control, but no approved procedure or executed records are attached. Relevance is direct; document-level evidence is insufficient."
-    },
-    {
-        "requirement_id":  "MDR-10-9-A",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-A",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-A",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-B",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-B",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-B",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-B",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-B",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-B",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-B",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-C",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-C",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-C",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-C",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-C",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-C",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-C",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-D",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-D",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-D",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-D",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-D",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-D",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-D",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-E",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-E",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-E",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-E",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-E",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-E",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-E",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-F",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-F",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-F",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-F",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-F",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-F",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-F",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-G",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-G",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-G",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-G",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-G",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-G",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-G",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-H",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-H",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-H",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-H",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-H",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-H",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-H",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-I",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-I",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-I",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-I",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-I",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-I",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-I",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-J",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-J",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-J",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-J",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-J",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-J",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-J",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-K",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-K",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-K",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-K",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-K",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-K",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-K",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-L",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-L",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-L",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-L",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-L",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-L",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-L",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-M",
-        "document_id":  "CA-CAPA-007",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-M",
-        "document_id":  "CA-CLIN-005",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-M",
-        "document_id":  "CA-PMS-006",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-M",
-        "document_id":  "CA-QMS-001",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-M",
-        "document_id":  "CA-QMS-003",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-M",
-        "document_id":  "CA-REQ-002",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    },
-    {
-        "requirement_id":  "MDR-10-9-M",
-        "document_id":  "CA-RM-004",
-        "relevance":  "UNLABELED",
-        "evidence_polarity":  "UNLABELED",
-        "sufficiency":  "UNLABELED",
-        "annotation_status":  "UNLABELED",
-        "annotator":  null,
-        "rationale":  null
-    }
+[
+  {
+    "requirement_id": "MDR-10-9-A",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-A",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-A",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-A",
+    "document_id": "CA-QMS-001",
+    "relevance": "DIRECTLY_RELEVANT",
+    "evidence_polarity": "PARTIAL",
+    "sufficiency": "INSUFFICIENT",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "Draft regulatory strategy addresses conformity assessment and change control, but no approved procedure or executed records are attached. Relevance is direct; document-level evidence is insufficient."
+  },
+  {
+    "requirement_id": "MDR-10-9-A",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-A",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-A",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-B",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-B",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-B",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-B",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-B",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-B",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-B",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-C",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-C",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-C",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-C",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-C",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-C",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-C",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-D",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-D",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-D",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-D",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-D",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-D",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-D",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-E",
+    "document_id": "CA-CAPA-007",
+    "relevance": "TOPICALLY_RELATED",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "Corrective actions may affect risk controls, but no explicit risk-management linkage or effectiveness records are documented."
+  },
+  {
+    "requirement_id": "MDR-10-9-E",
+    "document_id": "CA-CLIN-005",
+    "relevance": "TOPICALLY_RELATED",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "Clinical evaluation may inform benefit-risk assessment, but this outline contains no completed evaluation or explicit risk-management evidence."
+  },
+  {
+    "requirement_id": "MDR-10-9-E",
+    "document_id": "CA-PMS-006",
+    "relevance": "TOPICALLY_RELATED",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "PMS monitoring may inform risk management, but no explicit risk-management linkage or implemented monitoring evidence is documented."
+  },
+  {
+    "requirement_id": "MDR-10-9-E",
+    "document_id": "CA-QMS-001",
+    "relevance": "TOPICALLY_RELATED",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "Change control may relate to risk management, but the draft regulatory strategy does not document risk-management activities."
+  },
+  {
+    "requirement_id": "MDR-10-9-E",
+    "document_id": "CA-QMS-003",
+    "relevance": "IRRELEVANT",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "The generic management responsibility charter does not explicitly address risk management."
+  },
+  {
+    "requirement_id": "MDR-10-9-E",
+    "document_id": "CA-REQ-002",
+    "relevance": "TOPICALLY_RELATED",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "GSPR mapping may relate to Annex I risk requirements, but the worksheet is incomplete and traceability is unverified."
+  },
+  {
+    "requirement_id": "MDR-10-9-E",
+    "document_id": "CA-RM-004",
+    "relevance": "DIRECTLY_RELEVANT",
+    "evidence_polarity": "PARTIAL",
+    "sufficiency": "INSUFFICIENT",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "Preliminary hazard brainstorming is documented, but risk acceptability, residual risks, Annex I alignment and approval remain open."
+  },
+  {
+    "requirement_id": "MDR-10-9-F",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-F",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-F",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-F",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-F",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-F",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-F",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-G",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-G",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-G",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-G",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-G",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-G",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-G",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-H",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-H",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-H",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-H",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-H",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-H",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-H",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-I",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-I",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-I",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-I",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-I",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-I",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-I",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-J",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-J",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-J",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-J",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-J",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-J",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-J",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-K",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-K",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-K",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-K",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-K",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-K",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-K",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-L",
+    "document_id": "CA-CAPA-007",
+    "relevance": "DIRECTLY_RELEVANT",
+    "evidence_polarity": "PARTIAL",
+    "sufficiency": "INSUFFICIENT",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "CAPA workflow is outlined but effectiveness verification records are missing."
+  },
+  {
+    "requirement_id": "MDR-10-9-L",
+    "document_id": "CA-CLIN-005",
+    "relevance": "IRRELEVANT",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "The document does not explicitly address CAPA management or effectiveness verification."
+  },
+  {
+    "requirement_id": "MDR-10-9-L",
+    "document_id": "CA-PMS-006",
+    "relevance": "IRRELEVANT",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "The document does not explicitly address CAPA management or effectiveness verification."
+  },
+  {
+    "requirement_id": "MDR-10-9-L",
+    "document_id": "CA-QMS-001",
+    "relevance": "IRRELEVANT",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "The document does not explicitly address CAPA management or effectiveness verification."
+  },
+  {
+    "requirement_id": "MDR-10-9-L",
+    "document_id": "CA-QMS-003",
+    "relevance": "IRRELEVANT",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "The document does not explicitly address CAPA management or effectiveness verification."
+  },
+  {
+    "requirement_id": "MDR-10-9-L",
+    "document_id": "CA-REQ-002",
+    "relevance": "IRRELEVANT",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "The document does not explicitly address CAPA management or effectiveness verification."
+  },
+  {
+    "requirement_id": "MDR-10-9-L",
+    "document_id": "CA-RM-004",
+    "relevance": "IRRELEVANT",
+    "evidence_polarity": "INSUFFICIENT_CONTEXT",
+    "sufficiency": "NOT_ASSESSABLE",
+    "annotation_status": "PROVISIONAL",
+    "annotator": "AI_ASSISTED_DRAFT",
+    "rationale": "The document does not explicitly address CAPA management or effectiveness verification."
+  },
+  {
+    "requirement_id": "MDR-10-9-M",
+    "document_id": "CA-CAPA-007",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-M",
+    "document_id": "CA-CLIN-005",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-M",
+    "document_id": "CA-PMS-006",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-M",
+    "document_id": "CA-QMS-001",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-M",
+    "document_id": "CA-QMS-003",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-M",
+    "document_id": "CA-REQ-002",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  },
+  {
+    "requirement_id": "MDR-10-9-M",
+    "document_id": "CA-RM-004",
+    "relevance": "UNLABELED",
+    "evidence_polarity": "UNLABELED",
+    "sufficiency": "UNLABELED",
+    "annotation_status": "UNLABELED",
+    "annotator": null,
+    "rationale": null
+  }
 ]
