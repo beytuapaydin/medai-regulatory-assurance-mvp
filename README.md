@@ -1,3 +1,74 @@
+<!-- MEDAI_RESEARCH_PORTFOLIO_START -->
+
+# MedAI Assurance
+### Engineering Trust in Medical AI
+
+**From predictions to verifiable evidence.**
+
+Medical AI needs more than promising performance metrics.
+
+It needs reproducible experiments, patient-aware evaluation,
+traceable evidence, explicit limitations, and release decisions
+that withstand independent scrutiny.
+
+**MedAI Assurance** explores how these engineering controls
+can be built around medical AI research and regulatory evidence
+workflows.
+
+## Explore the Research
+
+### 1. Medical AI Evaluation & Assurance
+
+**[Explore the Research MVP](research_pipeline/README.md)**
+
+An auditable research pipeline built around PTB-XL myocardial
+infarction classification.
+
+Key research elements:
+
+- Patient-weighted evaluation across development folds
+- Reproducible training and independent prediction checks
+- SHA-256 evidence integrity and verification
+- Synthetic workflow and tamper-detection testing
+- Fail-closed release gates and documented human oversight
+
+**Recorded clean-archive verification:**
+169 passed, 1 skipped, 0 failed.
+
+Independent Fold 10 evaluation remains **NO_GO**.
+
+### 2. Regulatory Evidence & Assurance Workflows
+
+The existing MedAI Integrated pilot explores document matching,
+requirements traceability, review workflows and assurance
+reporting using synthetic examples.
+
+The original pilot documentation, verification results,
+data-quality exceptions, and limitations are preserved below.
+
+## Why These Two Workstreams Matter
+
+The research pipeline investigates whether model evaluation
+and technical evidence can be reproduced and verified.
+
+The regulatory workflow investigates how documented evidence
+can be reviewed, traced, and challenged.
+
+Together, they illustrate a broader engineering objective:
+
+**Move from AI-generated outputs toward reviewable,
+reproducible and accountable assurance evidence.**
+
+> Research prototypes only. No clinical deployment,
+> regulatory approval, independent holdout performance claim,
+> or automated release authorization is implied.
+
+---
+
+## Original Regulatory Assurance Project Documentation
+
+<!-- MEDAI_RESEARCH_PORTFOLIO_END -->
+
 # MedAI Regulatory Intelligence & Assurance
 
 **Human-in-the-loop evidence triage for medical device regulatory review**  
