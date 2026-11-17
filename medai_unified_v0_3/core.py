@@ -116,6 +116,25 @@ def _verify_clinical(clinical: dict, core_sha) -> None:
             or not _is_sha256_hex(proto.get("sha256"))
             or proto.get("sha256") != integ.get("protocol_sha256")):
         raise ValueError("Clinical protocol SHA-256 mismatch or invalid digest")
+    # Structural sanity alone is not independent recomputation; source records
+    # remain necessary to validate exploratory statistics against real inputs.
+    extra = clinical.get("exploratory_estimands")
+    if extra is not None:
+        if (not isinstance(extra, dict)
+                or extra.get("schema_version") != "medai-exploratory-evidence-v1"
+                or extra.get("scope") != "RESEARCH_ONLY_NOT_A_CLINICAL_GATE"
+                or extra.get("verification_level") != "SOURCE_RECALCULATION_REQUIRED"
+                or extra.get("source_inputs_sha256") != clinical.get("integrity", {}).get("inputs_sha256")
+                or not isinstance(extra.get("cohorts"), dict)):
+            raise ValueError("Malformed/unbound exploratory estimands")
+        for cid, stat in extra["cohorts"].items():
+            if stat is None:
+                continue
+            if (not isinstance(cid, str) or not isinstance(stat, dict)
+                    or stat.get("clinical_gate") != "NOT_EVALUATED"
+                    or stat.get("evaluation_scope") != "RESEARCH_EXPLORATORY_ONLY"
+                    or stat.get("manufacturer_release_decision") != "OUTSIDE_PLATFORM_SCOPE"):
+                raise ValueError("Exploratory statistics cannot assert clinical gate")
     overall = clinical.get("overall_gate_status")
     gate = clinical.get("technical_gate")
     findings = clinical.get("statistical_findings")
@@ -166,10 +185,33 @@ def _verify_clinical(clinical: dict, core_sha) -> None:
     observed_insuff = False
     any_measured = False
     tol = 1e-9
+    if extra is not None and set(extra["cohorts"]) != set(required):
+        raise ValueError("Exploratory cohorts differ from required_subgroups")
     for c in cohorts:
         cid = c["cohort_id"]
         m = c.get("basic_metrics")
         ci = c.get("paired_sensitivity_delta_ci")
+        if extra is not None:
+            stat = extra["cohorts"][cid]
+            if stat is not None:
+                sens, spec = stat.get("sensitivity"), stat.get("specificity")
+                if not isinstance(sens, dict) or not isinstance(spec, dict):
+                    raise ValueError("Exploratory endpoints invalid")
+                basic = c.get("basic_metrics")
+                if basic is not None and basic.get("measured"):
+                    if (sens.get("n_records") != basic.get("n_positive")
+                            or spec.get("n_records") != basic.get("n_negative")
+                            or sens.get("n_patients") != basic.get("n_positive_patients")
+                            or spec.get("n_patients") != basic.get("n_negative_patients")):
+                        raise ValueError("Exploratory counts contradict clinical cohort: insufficient cohort patient/record evidence")
+                    for endpoint, key in ((sens, "sensitivity"), (spec, "specificity")):
+                        rec = endpoint.get("record_weighted")
+                        if (not isinstance(rec, dict) or
+                                any(not _number(rec.get(field),lo=0,hi=1)
+                                    for field in ("baseline", "candidate")) or
+                                abs(rec["baseline"] - basic[key + "_v1"]) > 1e-9 or
+                                abs(rec["candidate"] - basic[key + "_v2"]) > 1e-9):
+                            raise ValueError("Exploratory rates contradict clinical metrics")
         if m is None:
             if ci is not None:
                 raise ValueError(f"Unmeasured cohort has CI: {cid}")
@@ -296,6 +338,20 @@ def _verify_protocol_lock(clinical: dict, protocol_path: str | Path) -> None:
     }
     if clinical.get("acceptance_rules") != expected_rules:
         raise ValueError("Clinical acceptance_rules or required_subgroups do not match locked protocol")
+
+    extra = clinical.get("exploratory_estimands")
+    if extra is not None:
+        for cid, stat in extra["cohorts"].items():
+            if stat is None:
+                continue
+            locked_rules = locked.data["rules"]
+            if (stat.get("confidence_level") != locked_rules["bootstrap_confidence_level"]
+                    or stat.get("replicates") != locked_rules["bootstrap_replicates"]
+                    or stat.get("min_patient_count_demo_only") != max(
+                        locked_rules["min_positive_patients"], locked_rules["min_negative_patients"])
+                    or stat.get("sensitivity", {}).get("seed") != locked_rules["bootstrap_seed"]
+                    or stat.get("specificity", {}).get("seed") != locked_rules["bootstrap_seed"] + 1):
+                raise ValueError(f"Cohort {cid}: exploratory bootstrap parameters do not match locked protocol")
 
     # Bootstrap settings are part of the predeclared protocol, not editable
     # result metadata. Reject re-hashed artifacts with cherry-picked seeds,
@@ -557,3 +613,42 @@ def write_package(package: dict, output: str | Path) -> Path:
         raise FileExistsError(f"Refusing to overwrite existing evidence package: {out}")
     out.write_text(json.dumps(package, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8", newline="\n")
     return out
+
+
+def verify_exploratory_against_records(clinical: dict, records: list[dict],
+                                       training_patient_ids: list[str] | None) -> str:
+    """Independent recomputation with caller-provided source records, not authentication."""
+    from src.clinical_validation.clinical_eval_runner import compute_sha256
+    from src.clinical_validation.paired_estimands_v1 import paired_estimands_exploratory
+    from src.clinical_validation.evidence_package_writer import _invalid_payload
+    if _invalid_payload(records):
+        raise ValueError("Invalid records for exploratory recalculation")
+    expected_hash = compute_sha256({
+        "records": records,
+        "training_patient_ids": sorted(training_patient_ids) if training_patient_ids is not None else None,
+    })
+    _verify_clinical(clinical, compute_sha256)
+    extra = clinical.get("exploratory_estimands")
+    if not isinstance(extra, dict) or extra.get("source_inputs_sha256") != expected_hash:
+        raise ValueError("Source records/training manifest do not match exploratory evidence")
+    rules = clinical.get("acceptance_rules", {})
+    # Bootstrap configuration is taken from the evidence for reproducibility;
+    # caller must additionally require a trusted independent protocol lock.
+    for cid, reported in extra["cohorts"].items():
+        subset = [r for r in records if cid in r["subgroups"]]
+        if not subset:
+            if reported is not None:
+                raise ValueError("Nonempty statistic for empty subgroup")
+            continue
+        if not isinstance(reported, dict):
+            raise ValueError("Missing exploratory statistic for nonempty subgroup")
+        actual = paired_estimands_exploratory(
+            subset,
+            confidence_level=reported["confidence_level"],
+            replicates=reported["replicates"],
+            seed=reported["sensitivity"]["seed"],
+            min_patient_count=reported["min_patient_count_demo_only"],
+        )
+        if actual != reported:
+            raise ValueError(f"Exploratory statistics failed source recomputation: {cid}")
+    return "EXPLORATORY_SOURCE_RECOMPUTED_NOT_AUTHENTICATED"

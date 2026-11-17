@@ -12,6 +12,7 @@ from typing import Any, Mapping, Sequence
 from .clinical_eval_runner import _canonical_patient_id, compute_sha256, evaluate_model_regression
 from .ptbxl_age_policy import ptbxl_age75_membership
 from .paired_statistics import patient_cluster_paired_sensitivity_ci
+from .paired_estimands_v1 import paired_estimands_exploratory, _validate as _validate_exploratory_inputs
 from .protocol_loader import LockedProtocol
 
 VALID_STATUSES = {"PASS", "FAIL", "INSUFFICIENT_EVIDENCE", "NOT_MEASURED"}
@@ -192,6 +193,35 @@ def build_evidence_package(
         "evidence_insufficiencies": additional_insuff,
         "multiple_testing_policy": "NOT_SPECIFIED_FOR_CLINICAL_INFERENCE",
     }
+    # Optional research-only addendum. Only construct after the common input
+    # validator succeeds; these values NEVER feed the technical gate.
+    exploratory = None
+    try:
+        if records:
+            _validate_exploratory_inputs(records)
+        research_input_valid = bool(records)
+    except ValueError:
+        research_input_valid = False
+    if not input_problems and research_input_valid and result.get("gate_status") != "NOT_MEASURED":
+        research_by_cohort = {}
+        for cohort in protocol.data["required_subgroups"]:
+            subset = [r for r in records if cohort in r["subgroups"]]
+            research_by_cohort[cohort] = paired_estimands_exploratory(
+                subset,
+                confidence_level=rules["bootstrap_confidence_level"],
+                replicates=rules["bootstrap_replicates"],
+                seed=rules["bootstrap_seed"],
+                min_patient_count=max(rules["min_positive_patients"],
+                                      rules["min_negative_patients"]),
+            ) if subset else None
+        exploratory = {
+            "schema_version": "medai-exploratory-evidence-v1",
+            "scope": "RESEARCH_ONLY_NOT_A_CLINICAL_GATE",
+            "source_inputs_sha256": package["integrity"]["inputs_sha256"],
+            "cohorts": research_by_cohort,
+            "verification_level": "SOURCE_RECALCULATION_REQUIRED",
+        }
+    package["exploratory_estimands"] = exploratory
     package["overall_gate_status"] = overall
     package["human_review"] = {"status": "PENDING_REVIEW", "review_record_separate": True, "technical_result_can_be_overridden": False}
     package["manufacturer_release_decision"] = "OUTSIDE_PLATFORM_SCOPE"
