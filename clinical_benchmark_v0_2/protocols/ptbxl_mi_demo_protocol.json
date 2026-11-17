@@ -1,0 +1,34 @@
+{
+  "schema_version": "medai-protocol-v0.2",
+  "protocol_id": "DEMO-ECG-MI-2026-001",
+  "protocol_version": "0.2.0",
+  "demonstration_only": true,
+  "clinical_claim_id": "DEMO-CLM-ECG-01",
+  "claim_scope": "Research-only binary classification of PTB-XL MI diagnostic superclass from 12-lead ECG; NOT acute MI triage or clinical decision support.",
+  "risk_control_id": "DEMO-RC-SW-04",
+  "risk_control_scope": "Research-only paired regression and evidence adequacy checks; not an ISO 14971 clinical risk acceptance decision.",
+  "dataset": {
+    "reference_name": "PTB-XL",
+    "reference_version": "1.0.3",
+    "note": "The included fixtures are SYNTHETIC and contain NO actual PTB-XL ECG records or trained-model predictions.",
+    "required_test_fold": 10
+  },
+  "required_subgroups": [
+    "ALL",
+    "AGE75_PLUS"
+  ],
+  "rules": {
+    "min_positive_records": 30,
+    "min_negative_records": 30,
+    "min_positive_patients": 30,
+    "max_sensitivity_drop": 0.02,
+    "max_critical_fn_rate": 0.12,
+    "max_specificity_drop": 0.02,
+    "non_inferiority_margin_sensitivity_delta": -0.02,
+    "bootstrap_confidence_level": 0.95,
+    "bootstrap_replicates": 1500,
+    "bootstrap_seed": 1701,
+    "min_negative_patients": 30
+  },
+  "evaluation_status_notice": "PASS means demo policy satisfied on the supplied records. Never clinical safety, regulatory clearance, or authorization to release."
+}
