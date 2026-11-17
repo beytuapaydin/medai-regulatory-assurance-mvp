@@ -48,7 +48,7 @@ def test_hash_rejects_tamper(tmp_path):
 
 def test_synthetic_waveform_to_metrics(tmp_path):
     # Uses the same locked original waveform reader as final model training.
-    source=Path(os.environ['MEDAI_PILOT_SOURCE'])/'ptbxl_pilot_train.py'
+    source = (Path(os.environ['MEDAI_PILOT_SOURCE']) if os.environ.get('MEDAI_PILOT_SOURCE') else Path(__file__).resolve().parents[2] / 'MedAI-PTBXL-Real-Pilot-v1') / 'ptbxl_pilot_train.py'
     assert source.is_file()
     train=m.load_source(source)
     rows=m.synthetic_pipeline(train,sample_model(),tmp_path,12)
