@@ -1,0 +1,83 @@
+{
+  "schema_version": "medai-rc1-evidence-registry-v1",
+  "scope": "local-sha256-reference-only",
+  "status": "RESEARCH_RELEASE_CANDIDATE_NO_GO",
+  "holdout_authorized": false,
+  "evidence": [
+    {
+      "id": "training_oof_predictions.csv",
+      "relative_path": "MedAI-Full-OOF-v1-Research/training_oof_predictions.csv",
+      "sha256": "ED83A106581E43275803D2E343F513D5BFC2B80A50E33584651816AE88A71E38"
+    },
+    {
+      "id": "full_oof_report.json",
+      "relative_path": "MedAI-Full-OOF-v1-Research/full_oof_report.json",
+      "sha256": "E6F4C9AEB01ED3C8469181A36CE97BA22328BA2E09845BA909077B390FDC0E6D"
+    },
+    {
+      "id": "oof_manifest.json",
+      "relative_path": "MedAI-Full-OOF-v1-Research/manifest.json",
+      "sha256": "CE779FC76ECFC203FEF105761AAF64A619A1A534F185A86BFDEB26DDFDD237CE"
+    },
+    {
+      "id": "paired_statistical_audit.json",
+      "relative_path": "MedAI-Full-OOF-Paired-Audit-v1.json",
+      "sha256": "52C9197D1E827E0367A15871AA6F4500456B8126D34144CEB12A29BA7F081141"
+    },
+    {
+      "id": "full_oof_replay.json",
+      "relative_path": "MedAI-Full-OOF-Reproduction-v2_1.json",
+      "sha256": "E05B0EAB5838261689CF1FE74BEF9189BE43F3C822127D216067F0B0323065FF"
+    },
+    {
+      "id": "protocol.json",
+      "relative_path": "MEDAI-PTBXL-MI-001-Frozen-v1/protocol.json",
+      "sha256": "B19AB6DF758A1C98B43C233B209DC6EF6F891677EA8A4FBCA6E1DD62F1FF2DBE"
+    },
+    {
+      "id": "evidence_index.json",
+      "relative_path": "MEDAI-PTBXL-MI-001-Frozen-v1/evidence_index.json",
+      "sha256": "75F267B823B4A9FCF177C70C38725E8380541848C58960F8D43451FE3983E78D"
+    },
+    {
+      "id": "protocol_freeze_manifest.json",
+      "relative_path": "MEDAI-PTBXL-MI-001-Frozen-v1/freeze_manifest.json",
+      "sha256": "53FFD3AE20CC6347B2969DF5C334F17052A650F8CAD71779DC11445C86CEDD61"
+    },
+    {
+      "id": "candidate_model.json",
+      "relative_path": "MedAI-Final-Candidate-Frozen-v1/candidate_model.json",
+      "sha256": "B0DBD0E84285F7F920545AEA8FA5C52E3812F399A8A1BE5F2C3EEDEB0CC231A0"
+    },
+    {
+      "id": "final_model_manifest.json",
+      "relative_path": "MedAI-Final-Candidate-Frozen-v1/final_model_manifest.json",
+      "sha256": "C344B33BED7613420A854868BD849BCA0A7B89AC98D5EE101EE79CB8E402A50A"
+    },
+    {
+      "id": "final_model_replay.json",
+      "relative_path": "MedAI-Final-Model-Reproduction-Audit-v1.json",
+      "sha256": "DA482FB11314A43C6FB64156BD899E16BAE6CE7AB843C2644476D7493CF39487"
+    },
+    {
+      "id": "holdout_readiness.json",
+      "relative_path": "MedAI-Holdout-Readiness-Review-v1.json",
+      "sha256": "367C06A0546B8F0CB764CDCEA23FE949ED061CD3460B3F68911F1C711A24BC12"
+    },
+    {
+      "id": "plan_validation_manifest.json",
+      "relative_path": "MedAI-Holdout-Plan-Validation-v1/plan_validation_manifest.json",
+      "sha256": "84862632310C1634CDC39BE82A43C260E7331E4CC9DA51757A7420B6A4DBCF27"
+    },
+    {
+      "id": "holdout_integration.json",
+      "relative_path": "MedAI-Holdout-Integration-Review-v1.json",
+      "sha256": "0D36083C4D7FB8B1A87F6F2E19D3E8F228E1E09585807E28763D42929EC8E763"
+    },
+    {
+      "id": "go_nogo_manifest.json",
+      "relative_path": "MedAI-Holdout-GoNoGo-Decision-v1/go_nogo_manifest.json",
+      "sha256": "75398F2834A0952FC5B063F17660CC2BF05409FB990E18AD0AEF3CAB979A225C"
+    }
+  ]
+}
