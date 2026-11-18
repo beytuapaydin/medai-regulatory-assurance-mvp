@@ -12,7 +12,6 @@ OOF={'training_oof_predictions.csv':'ED83A106581E43275803D2E343F513D5BFC2B80A50E
 'manifest.json':'CE779FC76ECFC203FEF105761AAF64A619A1A534F185A86BFDEB26DDFDD237CE'}
 TRAIN_HASH='9C0F6EEAE4A77FF77B361055C1D18CD21143DBF97828EFC56F7BA8CBB0CF4C0C'
 OOF_V2_HASH='A2190AF2A41B1BBA01FCF3D37F9C19E47DCFB618DE74E5154D6ACE3E444FD06E'
-RUNNER_HASH=''
 THRESHOLD=0.3795860831201651
 
 def digest(path):
@@ -40,6 +39,8 @@ def validate_model(model):
     if any(not isinstance(model.get(k),list) or len(model[k])!=72 for k in ('weights','feature_mean','feature_std')): raise ValueError('FAIL_CLOSED: invalid model dimensions')
     if not all(isinstance(x,(int,float)) and math.isfinite(x) for k in ('weights','feature_mean','feature_std') for x in model[k]): raise ValueError('FAIL_CLOSED: nonfinite model')
     if any(x<=0 for x in model['feature_std']) or not math.isfinite(model.get('intercept',float('nan'))): raise ValueError('FAIL_CLOSED: invalid scaler or intercept')
+    if model.get('features_per_lead')!=['mean','std','p05_centered','p95_centered','mean_abs_diff','peak_to_peak']: raise ValueError('FAIL_CLOSED: unexpected feature order')
+    if model.get('lead_order')!=['I','II','III','AVR','AVL','AVF','V1','V2','V3','V4','V5','V6']: raise ValueError('FAIL_CLOSED: unexpected lead order')
 
 def model_score(model, features):
     validate_model(model)
