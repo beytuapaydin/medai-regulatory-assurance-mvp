@@ -52,8 +52,11 @@ def test_scoring_verifies_manifest(tmp_path):
     with pytest.raises(ValueError,match='hash mismatch'):s.score(tmp_path,tmp_path/'features.json')
 
 def test_training_interface_matches_original():
-    p=Path(os.environ.get('MEDAI_PILOT_SOURCE',''))/'ptbxl_pilot_train.py'
-    if not p.exists():pytest.skip('Only present in package build environment')
+    pilot_dir = (Path(os.environ['MEDAI_PILOT_SOURCE'])
+                 if os.environ.get('MEDAI_PILOT_SOURCE')
+                 else Path(__file__).resolve().parents[2] / 'MedAI-PTBXL-Real-Pilot-v1')
+    p = pilot_dir / 'ptbxl_pilot_train.py'
+    assert p.is_file(), f'Missing expected pilot training source: {p}'
     spec=importlib.util.spec_from_file_location('train_orig',p)
     mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
     X=[[float(i+j)/100 for j in range(72)] for i in range(8)]
