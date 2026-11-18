@@ -7,14 +7,14 @@ on:
 
 jobs:
   offline-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       # Clinical tests import the local legacy package as `src`.
       # Explicit paths avoid relying on a developer's working directory.
       PYTHONPATH: ${{ github.workspace }}:${{ github.workspace }}/clinical_benchmark_v0_2
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Install test dependency
