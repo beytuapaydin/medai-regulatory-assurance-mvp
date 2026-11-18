@@ -5,6 +5,8 @@
 
 **From predictions to verifiable evidence.**
 
+> **Post-audit engineering update (RC1.2 hardening):** Offline CI verified 351 tests (23 Integrated, 103 Clinical, 53 Unified, 160 Research, 12 Release Evidence) on Ubuntu 24.04 / Python 3.12. This is a software-test result, not independent reproduction of the reported OOF statistical interval or clinical validation. [Scope and remaining evidence gaps](research_pipeline/release_candidate/docs/RC1_2_POST_AUDIT_REPORT.md). The RC1.1 tag remains frozen and Fold 10 remains NO_GO.
+
 Medical AI needs more than promising performance metrics.
 
 It needs reproducible experiments, patient-aware evaluation,

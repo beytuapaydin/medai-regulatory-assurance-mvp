@@ -67,3 +67,12 @@ def test_valid_nested_path_cross_platform(tmp_path):
     rel = m.validate_relative_path('a/b/c.txt')
     assert rel.as_posix() == 'a/b/c.txt'
     assert str(tmp_path / rel).endswith(str(Path('a') / 'b' / 'c.txt'))
+
+
+def test_holdout_math_module_copies_remain_byte_identical():
+    """Prevent silent statistical-policy drift in the two local module copies."""
+    root = Path(__file__).resolve().parents[2] / 'modules'
+    integration = root / 'MedAI-Holdout-Integration-Review-v1' / 'holdout_math_v1.py'
+    plan = root / 'MedAI-Holdout-Plan-Executor-Validation-v1' / 'holdout_math_v1.py'
+    assert integration.is_file() and plan.is_file()
+    assert integration.read_bytes() == plan.read_bytes(), 'FAIL_CLOSED: holdout metric module drift'

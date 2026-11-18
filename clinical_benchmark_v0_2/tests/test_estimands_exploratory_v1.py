@@ -125,3 +125,31 @@ def test_invalid_bootstrap_settings_rejected():
 def test_tags_without_all_must_not_disappear_from_exploratory_estimate():
     with pytest.raises(ValueError, match='ALL'):
         paired_estimands_exploratory([{**row('P1', 1, 1, 0), 'subgroups': ['EXCLUDED']}], replicates=300)
+
+
+def test_strict_identity_mode_rejects_missing_ecg_and_duplicate_canonical_ids():
+    no_id = [row('P1', 1, 1, 0)]
+    with pytest.raises(ValueError, match='required ecg_id'):
+        paired_estimands_exploratory(no_id, replicates=300, require_ecg_id=True)
+    duplicates = [row('P1', 1, 1, 0, '15709'), row('P2', 0, 0, 0, '15709.0')]
+    with pytest.raises(ValueError, match='Duplicate ecg_id'):
+        paired_estimands_exploratory(duplicates, replicates=300, require_ecg_id=True)
+
+
+def test_exploratory_age_tags_validate_sentinel_and_membership():
+    valid = {**row('P1', 1, 1, 0, 'ECG-1'), 'age': 300,
+             'subgroups': ['ALL', 'AGE75_PLUS']}
+    assert paired_estimands_exploratory([valid], replicates=300,
+                                       require_ecg_id=True)['sensitivity']['n_records'] == 1
+    invalid_tag = {**valid, 'subgroups': ['ALL']}
+    with pytest.raises(ValueError, match='AGE75_PLUS'):
+        paired_estimands_exploratory([invalid_tag], replicates=300, require_ecg_id=True)
+    missing_age = {**valid}
+    del missing_age['age']
+    with pytest.raises(ValueError):
+        paired_estimands_exploratory([missing_age], replicates=300,
+                                    require_ecg_id=True)
+    bad_age = {**valid, 'age': 250}
+    with pytest.raises(ValueError):
+        paired_estimands_exploratory([bad_age], replicates=300,
+                                    require_ecg_id=True)

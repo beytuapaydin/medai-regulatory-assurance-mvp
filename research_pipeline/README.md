@@ -3,6 +3,8 @@
 
 **Research MVP v1.0 RC1.1 | Medical AI Safety · Validation · Evidence Engineering**
 
+> **Branch status:** RC1.1 descriptions and recorded test totals below are historical frozen-release evidence. Subsequent RC1.2 engineering hardening adds stricter review, schema and CI checks, with 351 offline tests passing in the CI run described in [RC1.2 post-audit review](release_candidate/docs/RC1_2_POST_AUDIT_REPORT.md). Original paired OOF bootstrap generator and locked local inputs are not bundled; these changes do not prove exact independent numerical reproduction. Fold 10 remains NO_GO.
+
 *Can a medical AI system demonstrate not only what it predicts, but also how its performance was measured, what evidence supports it, and when it must refuse to advance?*
 
 That is the question behind **MedAI Assurance**.
