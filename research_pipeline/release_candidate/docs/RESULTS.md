@@ -16,6 +16,7 @@ These values were reported from runs on the user's Windows machine. The RC packa
 - 315 patients have both MI-positive and MI-negative records; these patients form **one cluster each** for paired bootstrap.
 - Candidate − baseline patient-weighted sensitivity difference: **0.02233459187342656** (~+2.23 percentage points).
 - Fixed-threshold paired patient-cluster bootstrap 95% percentile CI, 2,000 replicates: **[0.013366212093866812, 0.030920907523036483]**.
+- **Reproduction boundary:** The original generator script and local input/output artifacts for the reported 2,000-replicate paired OOF bootstrap were not bundled in the frozen RC1.1 public source tree. The recorded result is not independently recomputable from the released source package alone. The included `clinical_benchmark_v0_2/src/clinical_validation/paired_estimands_v1.py` and research holdout-math modules are not evidence that the exact reported full-OOF analysis was independently rerun. Recover and verify the original generator and locked inputs before claiming exact numerical reproduction.
 - Specificity difference CI: **[-0.0030192824966140857, 0.0029435464603612344]**.
 - Independent fixed-threshold metric recomputation: `PASS_INDEPENDENT_FIXED_THRESHOLD_METRIC_RECOMPUTE`.
 - Full OOF replay: baseline and candidate max absolute probability delta **0**.
