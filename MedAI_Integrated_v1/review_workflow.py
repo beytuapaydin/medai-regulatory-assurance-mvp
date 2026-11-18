@@ -124,27 +124,50 @@ def append_event(event):
         os.fsync(file.fileno())
 
 
-def export(data, events):
-    OUT.mkdir(parents=True,exist_ok=True)
+def current_reviews(data, events, source_sha):
+    """Only review events bound to the current assessment and requirement are active."""
+    requirements={r['requirement_id']:r for r in data['requirements']}
     latest={}
-    for e in events:latest[e['requirement_id']]=e
+    for e in events:
+        r=requirements.get(e.get('requirement_id'))
+        if not r or e.get('source_assessment_sha256')!=source_sha:
+            continue
+        if e.get('requirement_sha256')!=r.get('requirement_sha256'):
+            continue
+        candidate=e.get('candidate_id')
+        if candidate and candidate not in {c['document_id'] for c in r.get('candidates',[])}:
+            continue
+        latest[e['requirement_id']]=e
+    return latest
+
+
+def safe_csv_cell(value):
+    """Prevent spreadsheet formula execution without modifying audit-log records."""
+    if isinstance(value,str) and value.lstrip().startswith(('=','+','-','@','\t','\r','\n')):
+        return "'"+value
+    return value
+
+
+def export(data, events, source_sha):
+    OUT.mkdir(parents=True,exist_ok=True)
+    latest=current_reviews(data,events,source_sha)
     fields=['requirement_id','requirement','candidate_count','candidate_ids','review_state','reviewer','relevance','evidence_sufficiency_review','rationale','gap_or_follow_up','timestamp_utc','event_sha256']
     target=OUT/'review_summary.csv'
     with target.open('w',newline='',encoding='utf-8-sig') as f:
         w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
         for r in data['requirements']:
             e=latest.get(r['requirement_id'],{})
-            w.writerow({'requirement_id':r['requirement_id'],'requirement':r['requirement'],
+            row={'requirement_id':r['requirement_id'],'requirement':r['requirement'],
               'candidate_count':len(r.get('candidates',[])),
               'candidate_ids':'; '.join(c['document_id'] for c in r.get('candidates',[])),
               'review_state':'REVIEWED' if e else 'PENDING',
-              **{x:e.get(x,'') for x in fields if x not in ('requirement_id','requirement','candidate_count','candidate_ids','review_state')}})
+              **{x:e.get(x,'') for x in fields if x not in ('requirement_id','requirement','candidate_count','candidate_ids','review_state')}}
+            w.writerow({k:safe_csv_cell(v) for k,v in row.items()})
     return target
 
 
-def page(data,events,token,notice=''):
-    latest={}
-    for e in events:latest[e['requirement_id']]=e
+def page(data,events,source_sha,token,notice=''):
+    latest=current_reviews(data,events,source_sha)
     reviewed=len(latest)
     cards=[]
     for r in data['requirements']:
@@ -154,14 +177,14 @@ def page(data,events,token,notice=''):
         candidate_html=''.join('<div class="candidate"><b>'+html.escape(c['document_id'])+'</b> · '+html.escape(c['filename'])+'<blockquote>'+html.escape(c['passage'])+'</blockquote><small>SHA-256: '+html.escape(c['passage_sha256'])+'</small></div>' for c in candidates) or '<p class="muted">No automatically retrieved candidate; do not infer noncompliance.</p>'
         last='<p class="reviewed">Latest review: '+html.escape(old['relevance'])+' / '+html.escape(old['evidence_sufficiency_review'])+' by '+html.escape(old['reviewer'])+'</p>' if old else '<p class="muted">Pending human review</p>'
         cards.append('<section class="card"><h3>'+html.escape(rid)+' <span class="pill">'+str(len(candidates))+' candidate(s)</span></h3><p>'+html.escape(r['requirement'])+'</p>'+candidate_html+last+
-          '<form method="POST" action="/review"><input type="hidden" name="csrf" value="'+token+'"><input type="hidden" name="requirement_id" value="'+html.escape(rid)+'"><div class="fields"><label>Candidate<select name="candidate_id">'+options+'</select></label><label>Relevance<select name="relevance"><option>UNCERTAIN</option><option>RELEVANT</option><option>NOT_RELEVANT</option></select></label><label>Evidence sufficiency (reviewer only)<select name="sufficiency"><option>NOT_ASSESSED</option><option>PARTIAL</option><option>INSUFFICIENT</option><option>REVIEWER_CONSIDERS_SUFFICIENT</option></select></label></div><label>Reviewer name / identifier<input required minlength="2" maxlength="100" name="reviewer" placeholder="Qualified reviewer"></label><label>Rationale (minimum 15 characters)<textarea required minlength="15" maxlength="4000" name="rationale" placeholder="Explain exactly what this passage supports and does not support"></textarea></label><label>Gap / next action<textarea name="gap" maxlength="2000" placeholder="What evidence or review is still required?"></textarea></label><button type="submit">Record review decision</button></form></section>')
+          '<form method="POST" action="/review"><input type="hidden" name="csrf" value="'+token+'"><input type="hidden" name="source_sha" value="'+source_sha+'"><input type="hidden" name="requirement_id" value="'+html.escape(rid)+'"><div class="fields"><label>Candidate<select name="candidate_id">'+options+'</select></label><label>Relevance<select name="relevance"><option>UNCERTAIN</option><option>RELEVANT</option><option>NOT_RELEVANT</option></select></label><label>Evidence sufficiency (reviewer only)<select name="sufficiency"><option>NOT_ASSESSED</option><option>PARTIAL</option><option>INSUFFICIENT</option><option>REVIEWER_CONSIDERS_SUFFICIENT</option></select></label></div><label>Reviewer name / identifier<input required minlength="2" maxlength="100" name="reviewer" placeholder="Qualified reviewer"></label><label>Rationale (minimum 15 characters)<textarea required minlength="15" maxlength="4000" name="rationale" placeholder="Explain exactly what this passage supports and does not support"></textarea></label><label>Gap / next action<textarea name="gap" maxlength="2000" placeholder="What evidence or review is still required?"></textarea></label><button type="submit">Record review decision</button></form></section>')
     return ('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MedAI Evidence Review</title>'+
       '<style>body{font:15px system-ui,Arial;background:#f4f6f8;color:#172338;margin:0}header{background:#142d43;color:white;padding:25px 5vw}main{max-width:1000px;margin:25px auto;padding:0 15px}.card{background:white;border:1px solid #dee5ea;border-radius:12px;padding:22px;margin:18px 0;box-shadow:0 3px 13px #11111108}h1{margin:0 0 8px}h3{margin:0 0 10px}.muted,small{color:#627284}.candidate{border-left:3px solid #558296;padding:12px;margin:10px 0;background:#f7fafb}blockquote{margin:10px 0;white-space:pre-wrap}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}label{display:block;font-weight:600;margin:12px 0 3px}input,select,textarea{display:block;width:100%;box-sizing:border-box;padding:10px;border:1px solid #bdc9d4;border-radius:6px;margin-top:5px;font:inherit}textarea{min-height:65px}button{background:#19677b;color:white;border:0;border-radius:7px;padding:11px 18px;cursor:pointer}.pill{font-size:12px;color:#416275}.reviewed{color:#145a42;font-weight:600}.note{padding:12px 15px;background:#fff5dc;border-radius:8px;color:#624a16}</style>'+
       '<header><h1>MedAI · Evidence Review Workbench</h1><div>CardioAhead synthetic demonstration · '+str(reviewed)+'/13 requirements reviewed · '+str(len(events))+' audit events</div></header><main><p class="note"><b>NOT PRODUCTION — NOT A COMPLIANCE DECISION.</b> Candidate passages are not proof of regulatory conformity. Human review events are append-only, with a hash chain for accidental-change detection (not a tamper-proof signature).</p>'+('<p class="note">'+html.escape(notice)+'</p>' if notice else '')+'<p><a href="/gap-report">Gap Assessment Report</a> · <a href="/gap-report.csv">Gap CSV</a> · <a href="/summary.csv">Export review CSV</a> · <a href="/events.jsonl">Download audit log</a></p>'+''.join(cards)+'</main></html>')
 
 
 def serve(port):
-    data, source_sha=read_source()
+    read_source() # verify assessment before starting
     read_events() # verify before accepting new reviews
     token=secrets.token_urlsafe(32)
     class Handler(BaseHTTPRequestHandler):
@@ -176,15 +199,16 @@ def serve(port):
             self.end_headers();self.wfile.write(raw)
         def do_GET(self):
             try:
+                data, source_sha=read_source() # never render stale startup snapshot
                 events=read_events()
-                if self.path=='/': self.send(page(data,events,token));return
+                if self.path=='/': self.send(page(data,events,source_sha,token));return
                 if self.path in ('/gap-report','/gap-report.json','/gap-report.csv'):
                     report=build_report(data,events,source_sha)
                     if self.path=='/gap-report': self.send(to_html(report));return
                     if self.path=='/gap-report.csv': self.send(to_csv_bytes(report),'text/csv; charset=utf-8');return
                     self.send(json.dumps(report,ensure_ascii=False,indent=2),'application/json; charset=utf-8');return
                 if self.path=='/summary.csv':
-                    self.send(export(data,events).read_bytes(),'text/csv; charset=utf-8');return
+                    self.send(export(data,events,source_sha).read_bytes(),'text/csv; charset=utf-8');return
                 if self.path=='/events.jsonl':
                     self.send(EVENTS.read_bytes() if EVENTS.exists() else b'','application/x-ndjson; charset=utf-8');return
                 self.send('Not found',status=404)
@@ -198,11 +222,16 @@ def serve(port):
             form={k:v[0] for k,v in parse_qs(self.rfile.read(n).decode('utf-8'),keep_blank_values=True).items()}
             if not secrets.compare_digest(form.get('csrf',''),token):self.send('Invalid form token',status=403);return
             try:
+                data, source_sha=read_source()
+                if form.get('source_sha')!=source_sha:
+                    raise ValueError('Assessment changed; reload the review form')
                 events=read_events()
                 event=make_event(data,source_sha,events,form)
                 append_event(event)
                 self.send_response(303);self.send_header('Location','/');self.send_header('Content-Length','0');self.end_headers()
-            except ValueError as exc:self.send(page(data,read_events(),token,str(exc)),status=400)
+            except ValueError as exc:
+                data, source_sha=read_source()
+                self.send(page(data,read_events(),source_sha,token,str(exc)),status=400)
     srv=ThreadingHTTPServer(('127.0.0.1',port),Handler)
     print('LOCAL REVIEW UI: http://127.0.0.1:'+str(port),flush=True)
     print('EXISTING SOURCE (read only):',SOURCE,flush=True)
@@ -218,10 +247,10 @@ def main():
     parser.add_argument('command',choices=['serve','export','check'])
     parser.add_argument('--port',type=int,default=8765)
     args=parser.parse_args()
-    data,_=read_source()
+    data,source_sha=read_source()
     events=read_events()
     if args.command=='check':print('SOURCE:',len(data['requirements']),'requirements; AUDIT EVENTS:',len(events));print('INTEGRITY: OK')
-    elif args.command=='export':print('EXPORTED:',export(data,events))
+    elif args.command=='export':print('EXPORTED:',export(data,events,source_sha))
     elif args.command=='serve':serve(args.port)
 
 if __name__=='__main__':main()
