@@ -11,7 +11,7 @@ This is a **local, read-only, development-only** external rerun reported by the 
 | Full OOF prediction CSV | `training_oof_predictions.csv` SHA-256 `ED83A106581E43275803D2E343F513D5BFC2B80A50E33584651816AE88A71E38` — independent script reported PASS |
 | Historical paired audit JSON | SHA-256 `52C9197D1E827E0367A15871AA6F4500456B8126D34144CEB12A29BA7F081141` — independent script reported PASS |
 | Historical OOF report | SHA-256 `E6F4C9AEB01ED3C8469181A36CE97BA22328BA2E09845BA909077B390FDC0E6D` — recorded in locked audit, not separately hashed by this run |
-| PTB-XL metadata | Historical audit records SHA-256 `7600DE9C1B27D181D850B3C6038A35D7C3DDB6BB33B702E3A20252A6859D216B`. The independent script computed and stored the metadata digest in its local output but **did not compare that value to this expected hash**; verify it separately before claiming the metadata identity check PASS |
+| PTB-XL metadata | Historical audit records SHA-256 `7600DE9C1B27D181D850B3C6038A35D7C3DDB6BB33B702E3A20252A6859D216B`. The operator separately computed the local metadata SHA-256 with PowerShell `Get-FileHash -Algorithm SHA256` and verified exact equality with this historical digest on 18 November 2026 (**PASS**). The first independent script execution did not itself enforce this comparison, so the manual check is documented as a separate integrity step |
 | Scope | Folds 1–8, ECG metadata join via `ecg_id`, fixed historical model thresholds; no waveforms opened, independent Fold 10 **NO_GO** |
 
 The full-OOF CSV contains `ecg_id,strat_fold,y_true,baseline_probability,candidate_probability`, **not** `patient_id`. The independent script performed an explicit ECG-to-patient metadata join, checked unique IDs, checked all 17,418 development ECGs were represented, required patient-fold consistency, and used paired baseline/candidate decisions with fixed thresholds.
@@ -58,7 +58,7 @@ Sensitivity interval endpoint maximum absolute difference: `0.000224750615056` (
 
 ## Remaining evidence requirements before closing FND-02 completely
 
-1. Independently compare the local PTB-XL metadata SHA-256 against `7600DE9C1B27D181D850B3C6038A35D7C3DDB6BB33B702E3A20252A6859D216B`.
+1. **COMPLETE — metadata integrity:** PowerShell SHA-256 matched the historical locked value `7600DE9C1B27D181D850B3C6038A35D7C3DDB6BB33B702E3A20252A6859D216B`. Preserve the command and stdout as local provenance.
 2. Preserve the independent verifier source with source SHA-256, version, Python/platform information, deterministic input schema and regression tests; add a non-sensitive synthetic fixture to CI.
 3. Preserve a manifest containing SHA-256 digests for the actual local OOF CSV, metadata, historical audit JSON and generated aggregate-only report, while avoiding upload of patient-level records.
 4. Locate and independently inspect the original historical generator if exact bootstrap interval reproduction remains a release claim; otherwise explicitly label the exact CI as *historical, not independently reproduced*.
