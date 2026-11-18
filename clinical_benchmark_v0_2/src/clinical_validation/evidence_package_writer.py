@@ -198,7 +198,7 @@ def build_evidence_package(
     exploratory = None
     try:
         if records:
-            _validate_exploratory_inputs(records)
+            _validate_exploratory_inputs(records, require_ecg_id=True)
         research_input_valid = bool(records)
     except ValueError:
         research_input_valid = False
@@ -208,6 +208,7 @@ def build_evidence_package(
             subset = [r for r in records if cohort in r["subgroups"]]
             research_by_cohort[cohort] = paired_estimands_exploratory(
                 subset,
+                require_ecg_id=True,
                 confidence_level=rules["bootstrap_confidence_level"],
                 replicates=rules["bootstrap_replicates"],
                 seed=rules["bootstrap_seed"],
