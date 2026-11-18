@@ -122,15 +122,12 @@ def test_bootstrap_cluster_count_desync_rejected(tmp_path):
         core.verify_unified(u)
 
 
-def test_regenerated_default_demo_artifacts_verify_cleanly():
-    for rel in (
-        "medai_v032_demo/outputs/unified_evidence_SYNTHETIC_FAIL.json",
-        "medai_unified_v0_3/examples/unified_evidence_SYNTHETIC_FAIL.json",
-        "unified_demo_outputs/unified_evidence_SYNTHETIC_FAIL.json",
-    ):
-        target = ROOT / rel
-        assert target.is_file(), f"Missing required demo artifact: {target}"
-        pkg = core._load_json(target)
-        scope = core.verify_unified(pkg, protocol_path=PROTOCOL_PATH, require_protocol_lock=True)
-        assert scope == "PROTOCOL_LOCKED"
+def test_regenerated_synthetic_demo_artifact_verifies_cleanly(tmp_path):
+    # Generated demonstration outputs are not tracked in the clean Git checkout.
+    # Build fresh synthetic evidence rather than depending on developer-local files.
+    pkg, _, _ = _build(tmp_path, "fail")
+    scope = core.verify_unified(
+        pkg, protocol_path=PROTOCOL_PATH, require_protocol_lock=True
+    )
+    assert scope == "PROTOCOL_LOCKED"
 
