@@ -47,6 +47,27 @@ def paths(args):
       'MedAI-Holdout-Integration-Review-v1.json':args.docs/'MedAI-Holdout-Integration-Review-v1.json',
     }
 
+def validate_replay_deltas(replay):
+    import math
+
+    deltas = replay.get('model_parameters_max_abs_delta')
+    expected = {'intercept', 'weights', 'feature_mean', 'feature_std'}
+
+    if not isinstance(deltas, dict) or set(deltas) != expected:
+        raise AuditError('Missing or invalid model replay deltas')
+
+    values = list(deltas.values()) + [replay.get('inference_max_abs_delta')]
+
+    for value in values:
+        if type(value) not in (int, float):
+            raise AuditError('Invalid replay delta type')
+        if not math.isfinite(value) or value != 0:
+            raise AuditError('Replay delta is nonzero or nonfinite')
+
+    disagreements = replay.get('classification_disagreements')
+    if type(disagreements) is not int or disagreements != 0:
+        raise AuditError('Invalid classification disagreements')
+
 def review(args):
     files=paths(args)
     observed=[verify_one(files[name],sha) for name,sha in EXPECTED.items()]
@@ -67,8 +88,7 @@ def review(args):
     if integ.get('status')!='PASS_SYNTHETIC_WFDB_INTEGRATION_HOLDOUT_NOT_AUTHORIZED':raise AuditError('Integration is not verified')
     for name,obj in [('ready',ready),('plan',plan),('integration',integ)]:
         if obj.get('holdout_authorized') is not False:raise AuditError(name+' already authorizes holdout unexpectedly')
-    for key in ('model_max_absolute_delta','inference_max_absolute_delta'):
-        if key in replay and replay[key]!=0:raise AuditError('Replay discrepancy: '+key)
+    validate_replay_deltas(replay)
     return observed
 
 def write_json_new(path,obj):
