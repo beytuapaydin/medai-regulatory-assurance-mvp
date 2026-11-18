@@ -6,14 +6,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  offline-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install test dependency
+        run: python -m pip install -r research_pipeline/requirements-test.txt
       - name: Compile Python modules
-        run: python -m compileall -q MedAI_Integrated_v1
-      - name: Run integration tests
-        run: python -m unittest discover -s MedAI_Integrated_v1/tests -p 'test_*.py' -v
+        run: python -m compileall -q MedAI_Integrated_v1 clinical_benchmark_v0_2 medai_unified_v0_3 research_pipeline
+      - name: Integrated v1 unit and review regression tests
+        run: python -m pytest -q MedAI_Integrated_v1/tests
+      - name: Clinical benchmark unit tests
+        run: python -m pytest -q clinical_benchmark_v0_2/tests
+      - name: Unified v0.3 unit tests
+        run: python -m pytest -q medai_unified_v0_3/tests
+      - name: Research pipeline synthetic and offline unit tests
+        run: python -m pytest -q research_pipeline/modules --import-mode=prepend
+      - name: Release evidence utility unit tests
+        run: python -m pytest -q research_pipeline/release_candidate/tests
+
+# Never execute data-dependent workflows or independent Fold 10 evaluations in CI.
