@@ -7,7 +7,7 @@ import final_model_freeze_v1 as f
 import score_candidate_v1 as s
 
 def model():
-    return {'type':'l2_logistic_regression','l2_penalty':0.1,'epochs':200,'learning_rate':0.25,'decision_threshold':f.THRESHOLD,'weights':[0.1]*72,'feature_mean':[0.0]*72,'feature_std':[1.0]*72,'intercept':-0.2}
+    return {'type':'l2_logistic_regression','l2_penalty':0.1,'epochs':200,'learning_rate':0.25,'decision_threshold':f.THRESHOLD,'weights':[0.1]*72,'feature_mean':[0.0]*72,'feature_std':[1.0]*72,'intercept':-0.2,'features_per_lead':['mean','std','p05_centered','p95_centered','mean_abs_diff','peak_to_peak'],'lead_order':['I','II','III','AVR','AVL','AVF','V1','V2','V3','V4','V5','V6']}
 
 def test_frozen_hash_strings():
     assert f.FREEZE['freeze_manifest.json']=='53FFD3AE20CC6347B2969DF5C334F17052A650F8CAD71779DC11445C86CEDD61'
@@ -30,6 +30,22 @@ def test_score_zero_feature_vector():
 def test_bad_model_rejected():
     for changed in (dict(model(),decision_threshold=.5),dict(model(),weights=[0.1]*71),dict(model(),feature_std=[0.0]*72)):
         with pytest.raises(ValueError):f.validate_model(changed)
+
+def test_feature_and_lead_schema_required_and_ordered():
+    for field in ('features_per_lead', 'lead_order'):
+        without = model()
+        del without[field]
+        with pytest.raises(ValueError, match='feature order|lead order'):
+            f.validate_model(without)
+    permuted_leads = model()
+    permuted_leads['lead_order'] = list(reversed(permuted_leads['lead_order']))
+    with pytest.raises(ValueError, match='lead order'):
+        f.validate_model(permuted_leads)
+    permuted_features = model()
+    permuted_features['features_per_lead'] = list(reversed(permuted_features['features_per_lead']))
+    with pytest.raises(ValueError, match='feature order'):
+        f.validate_model(permuted_features)
+
 
 def test_bad_features_rejected():
     for x in ([0.0]*71,[0.0]*71+[float('nan')]):
