@@ -14,6 +14,7 @@ from random import Random
 from typing import Any, Mapping, Sequence
 
 from .clinical_eval_runner import _canonical_patient_id, _canonical_ecg_id, _invalid_identifier
+from .ptbxl_age_policy import ptbxl_age75_membership
 
 
 def _quantile(values: list[float], probability: float) -> float:
@@ -24,7 +25,7 @@ def _quantile(values: list[float], probability: float) -> float:
     return ordered[low] + (ordered[high] - ordered[low]) * (position - low)
 
 
-def _validate(rows: Sequence[Mapping[str, Any]]) -> list[tuple[str, int, int, int]]:
+def _validate(rows: Sequence[Mapping[str, Any]], *, require_ecg_id: bool = False) -> list[tuple[str, int, int, int]]:
     if not isinstance(rows, (tuple, list)) or not rows:
         raise ValueError('At least one record is required')
     validated = []
@@ -41,6 +42,8 @@ def _validate(rows: Sequence[Mapping[str, Any]]) -> list[tuple[str, int, int, in
         for field in ('y_true', 'y_pred_v1', 'y_pred_v2'):
             if type(r[field]) is not int or r[field] not in (0, 1):
                 raise ValueError(f'Row {i}: {field} must be binary integer')
+        if require_ecg_id and 'ecg_id' not in r:
+            raise ValueError(f'Row {i}: missing required ecg_id')
         if 'ecg_id' in r:
             eid = r['ecg_id']
             if type(eid) not in (int, str) or _invalid_identifier(str(eid)):
@@ -55,6 +58,10 @@ def _validate(rows: Sequence[Mapping[str, Any]]) -> list[tuple[str, int, int, in
                     or any(not isinstance(t, str) or _invalid_identifier(t) for t in tags)
                     or len(set(tags)) != len(tags)):
                 raise ValueError(f'Row {i}: subgroups must contain distinct tags including ALL')
+        if 'age' in r or ('subgroups' in r and 'AGE75_PLUS' in r['subgroups']):
+            age75 = ptbxl_age75_membership(r.get('age'))
+            if 'subgroups' in r and ('AGE75_PLUS' in r['subgroups']) != age75:
+                raise ValueError(f'Row {i}: AGE75_PLUS membership disagrees with age')
         validated.append((_canonical_patient_id(r['patient_id']),
                           r['y_true'], r['y_pred_v1'], r['y_pred_v2']))
     return validated
@@ -126,6 +133,7 @@ def _endpoint(rows: list[tuple[str, int, int, int]], label: int, *,
 def paired_estimands_exploratory(
     rows: Sequence[Mapping[str, Any]], *, confidence_level: float = 0.95,
     replicates: int = 1500, seed: int = 1701, min_patient_count: int = 30,
+    require_ecg_id: bool = False,
 ) -> dict[str, Any]:
     """Research-only paired sensitivity/specificity, each with two estimands.
 
@@ -143,7 +151,9 @@ def paired_estimands_exploratory(
         raise ValueError('seed must be integer')
     if type(min_patient_count) is not int or min_patient_count < 2:
         raise ValueError('min_patient_count must be >= 2')
-    cleaned = _validate(rows)
+    if type(require_ecg_id) is not bool:
+        raise ValueError('require_ecg_id must be a boolean')
+    cleaned = _validate(rows, require_ecg_id=require_ecg_id)
     return {
         'schema_version': 'medai-exploratory-estimands-v1',
         'evaluation_scope': 'RESEARCH_EXPLORATORY_ONLY',
@@ -160,6 +170,7 @@ def paired_estimands_exploratory(
                                  replicates=replicates, seed=seed + 1,
                                  min_patient_count=min_patient_count),
         'known_limitations': [
+            'Standalone legacy calls may omit ECG IDs unless require_ecg_id=True; production-quality source validation requires IDs.',
             'Exploratory, unqualified percentile bootstrap, not a clinical PASS/FAIL gate.',
             'Predictions, labels, cohort selection, test fold, threshold and model provenance are not authenticated here.',
             'Patient-weighted and record-weighted estimands have DIFFERENT intervals.',
