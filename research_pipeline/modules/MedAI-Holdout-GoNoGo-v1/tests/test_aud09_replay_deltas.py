@@ -1,6 +1,12 @@
-﻿import copy
+import copy
 import math
+import sys
+from pathlib import Path
+
 import pytest
+
+# Keep this test independent of collection order and developer PYTHONPATH.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import gonogo_v1 as g
 
 @pytest.fixture
