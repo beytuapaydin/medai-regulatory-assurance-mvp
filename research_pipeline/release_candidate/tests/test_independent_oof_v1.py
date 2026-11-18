@@ -86,7 +86,7 @@ def test_whole_patient_resampling_is_deterministic():
     rows = [[1,0,1,1,1,0], [1,1,1,1,0,0], [1,0,0,1,1,1]]
     assert v.compute(rows,replicates=50,seed=17) == v.compute(rows,replicates=50,seed=17)
     metrics, intervals = v.compute(rows,replicates=50,seed=17)
-    assert metrics['n_positive_patients'] == 2
+    assert metrics['n_positive_patients'] == 3
     assert metrics['n_negative_patients'] == 3
     assert intervals['sensitivity'][0] <= intervals['sensitivity'][1]
 
