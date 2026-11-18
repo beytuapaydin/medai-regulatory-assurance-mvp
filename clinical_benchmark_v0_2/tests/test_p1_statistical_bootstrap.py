@@ -31,6 +31,4 @@ def test_repeat_ecgs_keep_one_patient_cluster():
     ]
     stat = patient_cluster_paired_sensitivity_ci(rows, confidence_level=0.95,
                                                   replicates=300, seed=8)
-    assert stat['unique_positive_patient_clusters'] == 1
-    assert stat['point_delta_v2_minus_v1'] == -1
-    assert stat['ci_lower'] == -1 and stat['ci_upper'] == -1
+    assert stat is None

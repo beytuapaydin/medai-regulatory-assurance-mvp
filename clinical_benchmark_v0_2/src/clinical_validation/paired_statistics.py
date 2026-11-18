@@ -33,7 +33,7 @@ def patient_cluster_paired_sensitivity_ci(
     for row in positives:
         groups[_canonical_patient_id(str(row["patient_id"]))].append(row)
     patient_keys = sorted(groups)
-    if not patient_keys:
+    if len(patient_keys) < 2:
         return None
     def difference(sample: Sequence[Mapping[str, Any]]) -> float | None:
         pos = [r for r in sample if r["y_true"] == 1]
