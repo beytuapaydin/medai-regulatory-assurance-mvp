@@ -2,7 +2,7 @@
 
 **Status:** Independent fixed-threshold metric recomputation **PASS**; exploratory whole-patient bootstrap interval **close but not bitwise/numerically identical to historical audit**; historical original generator **not recovered**.
 
-This is a **local, read-only, development-only** external rerun reported by the project operator on 18 November 2026. The investigator's aggregate console output is reproduced in summary; original input datasets, local generated aggregate JSON and the independent script were not deposited in this Git branch. Accordingly, this report is an **operator-reported verification record**, not a reproducible fresh CI result. The frozen RC1.1 tag remains immutable.
+This is a **local, read-only, development-only** external rerun reported by the project operator on 18 November 2026. The operator's aggregate console output is reproduced below. A **new, independently implemented** verifier is now versioned as `research_pipeline/release_candidate/independent_oof_v1.py`, with synthetic-only offline tests in `research_pipeline/release_candidate/tests/test_independent_oof_v1.py`. This versioned implementation is not asserted to be byte-identical to the operator's earlier local script or the unbundled historical generator; a fresh execution of the newly committed source against the locked local files remains necessary to establish its exact numerical output. Raw input datasets and local aggregate outputs are not uploaded. The frozen RC1.1 tag remains immutable.
 
 ## Locked inputs and test scope
 
@@ -59,7 +59,7 @@ Sensitivity interval endpoint maximum absolute difference: `0.000224750615056` (
 ## Remaining evidence requirements before closing FND-02 completely
 
 1. **COMPLETE — metadata integrity:** PowerShell SHA-256 matched the historical locked value `7600DE9C1B27D181D850B3C6038A35D7C3DDB6BB33B702E3A20252A6859D216B`. Preserve the command and stdout as local provenance.
-2. Preserve the independent verifier source with source SHA-256, version, Python/platform information, deterministic input schema and regression tests; add a non-sensitive synthetic fixture to CI.
+2. **PARTIAL — committed independent verifier + synthetic CI tests:** New source and synthetic tests are versioned. Capture source SHA-256, Python/platform version and an actual rerun of the committed implementation on locally locked data before calling it exact source-level reproduction.
 3. Preserve a manifest containing SHA-256 digests for the actual local OOF CSV, metadata, historical audit JSON and generated aggregate-only report, while avoiding upload of patient-level records.
 4. Locate and independently inspect the original historical generator if exact bootstrap interval reproduction remains a release claim; otherwise explicitly label the exact CI as *historical, not independently reproduced*.
 5. A separate statistical reviewer should assess the conditional fixed-threshold CI, OOF model-selection bias, multiplicity and external validity.
@@ -69,3 +69,13 @@ Sensitivity interval endpoint maximum absolute difference: `0.000224750615056` (
 Development-fold OOF metrics are **not** independent holdout performance estimates. Thresholds were optimized on this same OOF dataset. A fixed-threshold bootstrap interval does not correct for threshold selection/model selection, nor justify clinical use. This work does **not** imply clinical validation, CE/MDR conformity, manufacturer release authorization, or Fold 10 access.
 
 **Release gate: FOLD 10 NO_GO.**
+
+## RC1.3 versioned verifier command
+
+From the repository root, after explicitly verifying local file paths, run locally (not in GitHub CI):
+
+```powershell
+python research_pipeline/release_candidate/independent_oof_v1.py --oof "$env:USERPROFILE\Documents\MedAI-Full-OOF-v1-Research\training_oof_predictions.csv" --metadata "$env:USERPROFILE\Documents\MedAI-Data\ptb-xl-1.0.3\ptbxl_database.csv" --audit-json "$env:USERPROFILE\Documents\MedAI-Full-OOF-Paired-Audit-v1.json"
+```
+
+This command performs hash locks, joins only development-fold metadata, checks patient-level estimands, runs 2,000 independent whole-patient paired-bootstrap draws, and prints an aggregate summary. It must not be used as an independent holdout/clinical estimate. Never upload the underlying full CSV or patient-level metadata.
