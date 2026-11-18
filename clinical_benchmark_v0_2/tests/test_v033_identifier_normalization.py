@@ -98,5 +98,28 @@ def test_bootstrap_canonicalizes_case_variant_positive_clusters():
         for i in range(40)
     ]
     stat = patient_cluster_paired_sensitivity_ci(rows, confidence_level=0.95, replicates=250, seed=1701)
-    assert stat["unique_positive_patient_clusters"] == 1
+    # Case variants resolve to one patient; no defensible bootstrap CI.
+    assert stat is None
 
+
+
+def test_bootstrap_case_variants_with_two_clusters():
+    rows = [
+        {
+            "patient_id": pid,
+            "y_true": 1,
+            "y_pred_v1": 1,
+            "y_pred_v2": 0,
+        }
+        for pid in (
+            "pos_pat_1", "POS_PAT_1",
+            "pos_pat_2", "POS_PAT_2",
+        )
+    ]
+    stat = patient_cluster_paired_sensitivity_ci(
+        rows, confidence_level=0.95,
+        replicates=250, seed=1701
+    )
+    assert stat is not None
+    assert stat["unique_positive_patient_clusters"] == 2
+    assert stat["replicates_valid"] == 250
