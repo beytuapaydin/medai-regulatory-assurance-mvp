@@ -13,6 +13,8 @@ The goal is not to create another medical AI accuracy leaderboard. It is to demo
 
 **Current status: Development evidence frozen. Independent holdout evaluation not authorized. Clinical use prohibited.**
 
+> **Release scope clarification (RC1.1):** The public repository includes the consolidated research source modules and their tests under [`modules/`](modules/). The [`release_candidate/`](release_candidate/) directory preserves the earlier RC1 documentation and evidence-verification subpackage; its documentation-only statements and risk register entry R10 describe that earlier packaging scope, not the full RC1.1 source tree. Source consolidation does not close the remaining fresh-environment installation, dependency review, independent reproduction or authorization work. Raw PTB-XL data, trained weights, patient-level predictions and frozen local evidence artifacts required for numerical reproduction are not bundled. See [`release_candidate/docs/RESULTS.md`](release_candidate/docs/RESULTS.md) and [`release_candidate/docs/REVIEW_AND_RELEASE_GATE.md`](release_candidate/docs/REVIEW_AND_RELEASE_GATE.md) for reported results and outstanding review conditions. No holdout authorization or clinical-use status has changed.
+
 ---
 
 ## 01 — The problem: A prediction is not sufficient evidence
