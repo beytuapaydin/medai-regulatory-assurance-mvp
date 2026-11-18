@@ -20,3 +20,11 @@ Export CSV through the browser or via:
 ```
 
 **Reviewer label `REVIEWER_CONSIDERS_SUFFICIENT` is solely a reviewer opinion about an evidence passage**, not MDR compliance or release approval. No regulatory legal decision is made. No label is provided or presumed by the software. Do not represent this demonstration as validated or production-ready.
+
+## RC1.2 security boundary (post-audit)
+
+The reviewer UI is a **single-user, localhost-only research demonstration**, not an authenticated multi-user review service. Binding to `127.0.0.1` and requiring a per-process CSRF form token do **not** authenticate other local applications or processes. The landing page exposes the CSRF token to any local process that can read the HTTP response; the origin guard also permits absent `Origin` headers. Do not run this server on a shared/untrusted computer, tunnel or expose port 8765, or store protected clinical or regulated evidence in it.
+
+CSV exports neutralize spreadsheet-formula-looking cells; the append-only hash chain detects accidental modification but does not provide trusted provenance, non-repudiation, or a malicious-local-process security guarantee. Production use requires explicit authentication/authorization, an approved threat model and security assessment, data access controls, and independently verified review-event provenance.
+
+Assessment-scoped filtering in RC1.2 ensures that historical events remain in the log but are not counted as current reviews when their source assessment, requirement hash or selected candidate no longer matches.
